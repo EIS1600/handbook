@@ -13,7 +13,7 @@ This chapter offers a general introduction to R.
 
 ## General Introduction
 
- ### Goals{#ItoR_goals}
+### Goals{#ItoR_goals}
 
 * Install R and R Studio and start working with them
 	* R <https://www.r-project.org/> 
@@ -53,7 +53,7 @@ Unzip them and open in `RStudio`. Let's work through it!
 
 **NB:** Original worksheets prepared by Lincoln Mullen, GMU (<https://dh-r.lincolnmullen.com/worksheets.html>)
 
- ### Topics covered{#ItoR_topics}
+### Topics covered{#ItoR_topics}
 
 - `00_worksheets_basics_of_rmarkdown.zip`
   - basics of R markdown;
@@ -71,8 +71,9 @@ Unzip them and open in `RStudio`. Let's work through it!
 ### Reference materials{#ItoR_RM}
 
 Two main books on R markdown:
-  * <https://bookdown.org/yihui/rmarkdown/>;
-  * <https://bookdown.org/yihui/rmarkdown-cookbook/>;
+
+* <https://bookdown.org/yihui/rmarkdown/>;
+* <https://bookdown.org/yihui/rmarkdown-cookbook/>;
   
 * *R Primer* (<https://dh-r.lincolnmullen.com/primer.html>) in: Lincoln A. Mullen, *Computational Historical Thinking: With Applications in R (2018–):* <https://dh-r.lincolnmullen.com>.
 	* Use the this primer as a quick introduction to the `R` language, or as a reference for the rest of the course.

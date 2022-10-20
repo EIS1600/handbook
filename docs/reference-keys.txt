@@ -2,9 +2,11 @@ introductory-matters
 general-tools-and-techniques
 ItoR_00
 general-introduction
+ItoR_goals
 ItoR_class
 installing-rmarkdown
 starting-with-our-first-workbook
+ItoR_topics
 ItoR_RM
 ItoR_HW
 ItoR_commonIssues
