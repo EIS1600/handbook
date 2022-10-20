@@ -137,11 +137,11 @@ We will also use a variety of packages for `R`, which we will be installing when
 - **[ `#04` ]** Basics III: Data Visualization; Functions
 - **[ `#05` ]** Data I: Collecting, Organizing, Creating
 - **[ `#06` ]** Data II: Modeling & Manipulating
-- **[ `#07` ]** Text Analysis Methods I: Georeferencing and Geocoding
-- **[ `#08` ]** Text Analysis Methods II: Creating Base Maps
-- **[ `#09` ]** Text Analysis Methods III: Mapping Categorical and Continuous Data 
-- **[ `#10` ]** Text Analysis Methods IV: Mapping Networks
-- **[ `#11` ]** Text Analysis Methods V: Interactive Maps
+- **[ `#07` ]** Geospatial Analysis Methods I: Georeferencing and Geocoding
+- **[ `#08` ]** Geospatial Analysis Methods II: Creating Base Maps
+- **[ `#09` ]** Geospatial Analysis Methods III: Mapping Categorical and Continuous Data 
+- **[ `#10` ]** Geospatial Analysis Methods IV: Mapping Networks
+- **[ `#11` ]** Geospatial Analysis Methods V: Interactive Maps
 - **[ `#12` ]** Projects I
 - **[ `#13` ]** Projects II
 - **[ `#14` ]** Projects III
