@@ -5,10 +5,9 @@
 This chapter offers a general introduction to R.
 
 0. General Introduction
-1. Basics I:
-2. Basics II:
-3. Basics III:
-4. Basics IV:
+1. Basics I: Data Structures and Subsetting
+2. Basics II: Data Manipulation & Exloratory Analysis
+3. Basics III: Data Visualization; Functions
 
 
 ## General Introduction
