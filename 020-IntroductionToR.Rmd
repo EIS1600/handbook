@@ -4,12 +4,14 @@
 
 This chapter offers a general introduction to R.
 
+0. General Introduction
 1. Basics I:
 2. Basics II:
 3. Basics III:
 4. Basics IV:
 
- ## General Introduction
+
+## General Introduction
 
  ### Goals{#ItoR_goals}
 
@@ -18,19 +20,19 @@ This chapter offers a general introduction to R.
 	* R Studio <https://www.rstudio.com/>
 * Get to know R Notebooks (R markdown)
 
- ### Software{#ItoR_sw}
-
-* R <https://www.r-project.org/> 
-* R Studio <https://www.rstudio.com/>
-
- ### Class{#ItoR_class}
+### Class{#ItoR_class}
 
 * R Studio Interface
+  * four-partite division
+* Creating a project
+  - create some folder where you are going to keep everything related to te course;
+  - create a project, pointing to that folder;
 * Installing libraries (packages)
+  - `install.pacgages("nameOfLibrary")`
 * R Notebook elements: combining prose and code
 * Converting R Notebook into different formats
 
- #### Installing `rmarkdown`{#ItoR_installation}
+#### Installing `rmarkdown`{#ItoR_installation}
 
 Instructions here: <https://bookdown.org/yihui/rmarkdown/installation.html>
 
@@ -39,87 +41,86 @@ More information on R Markdown:
 * <https://rmarkdown.rstudio.com/lesson-1.html>
 * <https://bookdown.org/yihui/rmarkdown/> 
 
-<!--
- #### YAML header
 
-``` r
----
-title: "R Notebook Test"
-output:
-  html_document:
-    df_print: paged
-    toc: true
----
-```
--->
+### Starting with our first workbook:
 
- ### Starting with our first workbook:
+Now, download two worksheet files:
 
-Now, download a worksheet file ([01_worksheets_familiar-with-r.Rmd.zip](./files/ws/01_worksheets_familiar-with-r.Rmd.zip)). Unzip it and open in `RStudio`. Let's work through it!
+- [00_worksheets_basics_of_rmarkdown.zip](./files/ws_new/00_worksheets_basics_of_rmarkdown.zip)
+- [01_worksheets_familiar-with-r_NEW.zip](./files/ws_new/01_worksheets_familiar-with-r_NEW.zip)
+
+Unzip them and open in `RStudio`. Let's work through it!
 
 **NB:** Original worksheets prepared by Lincoln Mullen, GMU (<https://dh-r.lincolnmullen.com/worksheets.html>)
 
  ### Topics covered{#ItoR_topics}
 
-- Values
-- Variables
-- Vectors
-- Built-in functions
-- Using the documentation
-- Data frames
-- Installing and loading packages
-- Simple plots
+- `00_worksheets_basics_of_rmarkdown.zip`
+  - basics of R markdown;
+- `01_worksheets_familiar-with-r_NEW.zip`
+  - Values
+  - Variables
+  - Vectors
+  - Built-in functions
+  - Using the documentation
+  - Data frames
+  - Installing and loading packages
+  - Simple plots
 
 
- ### Reference materials{#ItoR_RM}
+### Reference materials{#ItoR_RM}
 
+Two main books on R markdown:
+  * <https://bookdown.org/yihui/rmarkdown/>;
+  * <https://bookdown.org/yihui/rmarkdown-cookbook/>;
+  
 * *R Primer* (<https://dh-r.lincolnmullen.com/primer.html>) in: Lincoln A. Mullen, *Computational Historical Thinking: With Applications in R (2018–):* <https://dh-r.lincolnmullen.com>.
 	* Use the this primer as a quick introduction to the `R` language, or as a reference for the rest of the course.
 * The original worksheets have been developed by Lincoln Mullen (<https://dh-r.lincolnmullen.com/worksheets.html>). The ones used in this class might have undergone some changes and relevant adaptations.
 * Your `R` installation may ‘speak’ your main language. It is nice on one hand, but can be quite inconvenient in class, where the main language is English. You may have to do cast some spells to switch `R` into English. Possible solutions can be found here: <https://stackoverflow.com/questions/13575180/how-to-change-language-settings-in-r/>
 
- ### Homework{#ItoR_HW}
+### Homework{#ItoR_HW}
 
 * Complete the worksheet *Getting familiar with R*.
 * Generate the results into HTML or PDF (PDF is a little bit trickier).
 * Start working through the first assigned course in DataCamp (two weeks to complete; requires about 4 hours)
 * Submit your homework as described below.
 
- ### Common issues with homework{#ItoR_commonIssues}
+### Common issues with homework{#ItoR_commonIssues}
 
- #### Tracing errors
+#### Tracing errors
 
 Errors happen all the time. You will run into errors when you run your code. You will run into error messages when "knitting" your document --- as a result, your document will not be generated. To resolve this:
 
 1. It is important to run each chunk of code separately to ensure that they all work. If any of the chunks throw errors, you will not be able to "knit" your documents.
 2. When you run into an error, `R Markdown` panel (usually in the lower left corner of RStudio interface) will tell you in which line the error occurred. You will need to fix it the same way you would in Step 1.
 
- #### Comments / Commenting out{#ItoR_Comments}
+#### Comments / Commenting out{#ItoR_Comments}
 
 You do not want to constantly keep [re]installing libraries. So, if a library is already installed, you can "comment out" that line.
 
 ```{r, eval=FALSE}
-install.packages("historydata")
-install.packages("dplyr")
+install.packages("gapminder")
+install.packages("tidyverse")
 ```
 
 For example, the code chunk above should become: 
 
 ```{r, eval=FALSE}
- ##install.packages("historydata")
- ##install.packages("dplyr")
+ #install.packages("gapminder")
+ #install.packages("tidyverse")
 ```
 
 Adding `#` in front of a line (or a section of a line) turns it into a `comment` and it will not longer be executed.
 
- #### Random errors:{#ItoR_RandomErrors}
+#### Random errors:{#ItoR_RandomErrors}
 
 Think about the following two lines of code. Any issues that you can explain? (You might want to run these lines in R to get some clues)
 
 * ``` `?median` ```
 * `variable1 <- DigitalHumanities`
 
- ### Submitting homework{#ItoR_SHW}
+### Submitting homework{#ItoR_SHW}
 
 * Homework assignment must be submitted by the beginning of the next class;
 * Email your homework to the instructor as attachments.

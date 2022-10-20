@@ -1,6 +1,17 @@
 introductory-matters
 general-tools-and-techniques
 ItoR_00
+general-introduction
+ItoR_class
+installing-rmarkdown
+starting-with-our-first-workbook
+ItoR_RM
+ItoR_HW
+ItoR_commonIssues
+tracing-errors
+ItoR_Comments
+ItoR_RandomErrors
+ItoR_SHW
 introduction-to-python
 thinking-about-data
 research-methods-in-r
