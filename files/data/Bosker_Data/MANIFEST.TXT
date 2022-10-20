@@ -1,0 +1,3 @@
+bagdad - london - final restat.dta (application/x-stata) 2185874 bytes.
+Bagdad London - do file generating all results in paper.do (text/x-stata-syntax; charset=US-ASCII) 63993 bytes.
+Variable description Bosker et al. - Baghdad to London.pdf (application/pdf) 115309 bytes.

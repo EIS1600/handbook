@@ -2,7 +2,6 @@
 # Syllabi {-}
 '`
 
-
 ## UHH AAI WiSe 22/23, 57-525 Online S: Digital Humanities --- GIS with R
 
 ### Course Details{-}
