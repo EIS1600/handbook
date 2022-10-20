@@ -28,7 +28,7 @@ This chapter offers a general introduction to R.
   - create some folder where you are going to keep everything related to te course;
   - create a project, pointing to that folder;
 * Installing libraries (packages)
-  - `install.pacgages("nameOfLibrary")`
+  - `install.packages("nameOfLibrary")`
 * R Notebook elements: combining prose and code
 * Converting R Notebook into different formats
 
