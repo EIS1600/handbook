@@ -1,0 +1,9 @@
+# Research Methods in R
+
+[*in progress*]
+
+This chapter introduces the main research methods in R.
+
+1. Text Analysis
+2. Geospatial Analysis
+3. Social Network Analysis

@@ -17,6 +17,8 @@ general-tools-and-techniques
 introduction-to-r
 introduction-to-python
 thinking-about-data
+research-methods-in-r
+research-methods-in-python
 example
 L01_goals
 L01_sw

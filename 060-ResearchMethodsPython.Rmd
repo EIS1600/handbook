@@ -1,0 +1,9 @@
+# Research Methods in Python
+
+[*in progress*]
+
+This chapter introduces the main research methods in Python.
+
+1. Text Analysis
+2. Geospatial Analysis
+3. Social Network Analysis
