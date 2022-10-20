@@ -3,7 +3,6 @@
 '`
 
 
-
 ## UHH AAI WiSe 22/23, 57-525 Online S: Digital Humanities --- GIS with R
 
 ### Course Details{-}
@@ -58,14 +57,20 @@ Final project will be discussed later. You will have an option to build on what 
 
 ### Practice Worksheets (R Notebooks)
 
-- [01_worksheets_familiar-with-r.Rmd.zip](./files/ws/01_worksheets_familiar-with-r.Rmd.zip)
-- [02_worksheets_data-structures.Rmd.zip](./files/ws/02_worksheets_data-structures.Rmd.zip)
-- [03_worksheets_data-manipulation-introduction.Rmd.zip](./files/ws/03_worksheets_data-manipulation-introduction.Rmd.zip)
-- [04_worksheets_data-manipulation-continued.Rmd.zip](./files/ws/04_worksheets_data-manipulation-continued.Rmd.zip)
-- [05_worksheets_ggplot2-introduction-MGR-mod.Rmd.zip](./files/ws/05_worksheets_ggplot2-introduction-MGR-mod.Rmd.zip)
-- [06_worksheets_functions.Rmd.zip](./files/ws/06_worksheets_functions.Rmd.zip)
+**Updated Workbooks()**
 
-*NB*: Worksheets 1-6 have been developed by Lincoln Mullen. Source: Lincoln A. Mullen, *Computational Historical Thinking: With Applications in R (2018–)*: <http://dh-r.lincolnmullen.com>.
+- 
+
+**Old Workbooks ()**
+
+- [01_worksheets_familiar-with-r.Rmd.zip](./files/ws_old/01_worksheets_familiar-with-r.Rmd.zip)
+- [02_worksheets_data-structures.Rmd.zip](./files/ws_old/02_worksheets_data-structures.Rmd.zip)
+- [03_worksheets_data-manipulation-introduction.Rmd.zip](./files/ws_old/03_worksheets_data-manipulation-introduction.Rmd.zip)
+- [04_worksheets_data-manipulation-continued.Rmd.zip](./files/ws_old/04_worksheets_data-manipulation-continued.Rmd.zip)
+- [05_worksheets_ggplot2-introduction-MGR-mod.Rmd.zip](./files/ws_old/05_worksheets_ggplot2-introduction-MGR-mod.Rmd.zip)
+- [06_worksheets_functions.Rmd.zip](./files/ws_old/06_worksheets_functions.Rmd.zip)
+
+*NB*: Worksheets 1-6 (*old workbooks*) have been developed by Lincoln Mullen. Source: Lincoln A. Mullen, *Computational Historical Thinking: With Applications in R (2018–)*: <http://dh-r.lincolnmullen.com>.
 
 ### Additional Study Materials
 
