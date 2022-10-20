@@ -1,6 +1,6 @@
 --- 
 title: "Digital Islamicate Studies Handbook"
-author: ["Maxim G. Romanov", "Peter Verkinderen"]
+author: ["Maxim G. Romanov"]
 date: "`r Sys.Date()`"
 description: "This is a Handbook for Digital Islamicate Studies. Work in progress, based on tought courses."
 url: 'https\://eis1600.github.io/handbook/'
