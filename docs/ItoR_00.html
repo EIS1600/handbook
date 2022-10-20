@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>CHAPTER 1 Introductory Matters | Digital Islamicate Studies Handbook</title>
+  <title>CHAPTER 3 Introduction to R | Digital Islamicate Studies Handbook</title>
   <meta name="description" content="This is a Handbook for Digital Islamicate Studies. Work in progress, based on tought courses." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="CHAPTER 1 Introductory Matters | Digital Islamicate Studies Handbook" />
+  <meta property="og:title" content="CHAPTER 3 Introduction to R | Digital Islamicate Studies Handbook" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://eis1600.github.io/handbook/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="EIS1600/handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="CHAPTER 1 Introductory Matters | Digital Islamicate Studies Handbook" />
+  <meta name="twitter:title" content="CHAPTER 3 Introduction to R | Digital Islamicate Studies Handbook" />
   
   <meta name="twitter:description" content="This is a Handbook for Digital Islamicate Studies. Work in progress, based on tought courses." />
   
@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <link rel="apple-touch-icon-precomposed" sizes="120x120" href="touch-icon.png" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="general-tools-and-techniques.html"/>
+<link rel="prev" href="general-tools-and-techniques.html"/>
+<link rel="next" href="introduction-to-python.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -228,13 +228,116 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introductory-matters-1" class="section level1" number="1">
-<h1><span class="header-section-number">CHAPTER 1</span> Introductory Matters</h1>
+<div id="ItoR_00" class="section level1" number="3">
+<h1><span class="header-section-number">CHAPTER 3</span> Introduction to R</h1>
 <p>[<em>in progress</em>]</p>
+<p>This chapter offers a general introduction to R.</p>
+<ol style="list-style-type: decimal">
+<li>Basics I:</li>
+<li>Basics II:</li>
+<li>Basics III:</li>
+<li>Basics IV:</li>
+</ol>
+<p>## General Introduction</p>
+<p>### Goals{#ItoR_goals}</p>
 <ul>
-<li>general introduction into the concept and the goal of the handbook;</li>
-<li>guidelines on how to use the handbook;</li>
-<li>examples of syllabi that use the handbook;</li>
+<li>Install R and R Studio and start working with them
+<ul>
+<li>R <a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a></li>
+<li>R Studio <a href="https://www.rstudio.com/" class="uri">https://www.rstudio.com/</a></li>
+</ul></li>
+<li>Get to know R Notebooks (R markdown)</li>
+</ul>
+<p>### Software{#ItoR_sw}</p>
+<ul>
+<li>R <a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a></li>
+<li>R Studio <a href="https://www.rstudio.com/" class="uri">https://www.rstudio.com/</a></li>
+</ul>
+<p>### Class{#ItoR_class}</p>
+<ul>
+<li>R Studio Interface</li>
+<li>Installing libraries (packages)</li>
+<li>R Notebook elements: combining prose and code</li>
+<li>Converting R Notebook into different formats</li>
+</ul>
+<p>#### Installing <code id="ItoR_installation">rmarkdown</code></p>
+<p>Instructions here: <a href="https://bookdown.org/yihui/rmarkdown/installation.html" class="uri">https://bookdown.org/yihui/rmarkdown/installation.html</a></p>
+<p>More information on R Markdown:</p>
+<ul>
+<li><a href="https://rmarkdown.rstudio.com/lesson-1.html" class="uri">https://rmarkdown.rstudio.com/lesson-1.html</a></li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/" class="uri">https://bookdown.org/yihui/rmarkdown/</a></li>
+</ul>
+<!--
+ #### YAML header
+
+``` r
+---
+title: "R Notebook Test"
+output:
+  html_document:
+    df_print: paged
+    toc: true
+---
+```
+-->
+<p>### Starting with our first workbook:</p>
+<p>Now, download a worksheet file (<a href="./files/ws/01_worksheets_familiar-with-r.Rmd.zip">01_worksheets_familiar-with-r.Rmd.zip</a>). Unzip it and open in <code>RStudio</code>. Let’s work through it!</p>
+<p><strong>NB:</strong> Original worksheets prepared by Lincoln Mullen, GMU (<a href="https://dh-r.lincolnmullen.com/worksheets.html" class="uri">https://dh-r.lincolnmullen.com/worksheets.html</a>)</p>
+<p>### Topics covered{#ItoR_topics}</p>
+<ul>
+<li>Values</li>
+<li>Variables</li>
+<li>Vectors</li>
+<li>Built-in functions</li>
+<li>Using the documentation</li>
+<li>Data frames</li>
+<li>Installing and loading packages</li>
+<li>Simple plots</li>
+</ul>
+<p>### Reference materials{#ItoR_RM}</p>
+<ul>
+<li><em>R Primer</em> (<a href="https://dh-r.lincolnmullen.com/primer.html" class="uri">https://dh-r.lincolnmullen.com/primer.html</a>) in: Lincoln A. Mullen, <em>Computational Historical Thinking: With Applications in R (2018–):</em> <a href="https://dh-r.lincolnmullen.com" class="uri">https://dh-r.lincolnmullen.com</a>.
+<ul>
+<li>Use the this primer as a quick introduction to the <code>R</code> language, or as a reference for the rest of the course.</li>
+</ul></li>
+<li>The original worksheets have been developed by Lincoln Mullen (<a href="https://dh-r.lincolnmullen.com/worksheets.html" class="uri">https://dh-r.lincolnmullen.com/worksheets.html</a>). The ones used in this class might have undergone some changes and relevant adaptations.</li>
+<li>Your <code>R</code> installation may ‘speak’ your main language. It is nice on one hand, but can be quite inconvenient in class, where the main language is English. You may have to do cast some spells to switch <code>R</code> into English. Possible solutions can be found here: <a href="https://stackoverflow.com/questions/13575180/how-to-change-language-settings-in-r/" class="uri">https://stackoverflow.com/questions/13575180/how-to-change-language-settings-in-r/</a></li>
+</ul>
+<p>### Homework{#ItoR_HW}</p>
+<ul>
+<li>Complete the worksheet <em>Getting familiar with R</em>.</li>
+<li>Generate the results into HTML or PDF (PDF is a little bit trickier).</li>
+<li>Start working through the first assigned course in DataCamp (two weeks to complete; requires about 4 hours)</li>
+<li>Submit your homework as described below.</li>
+</ul>
+<p>### Common issues with homework{#ItoR_commonIssues}</p>
+<p>#### Tracing errors</p>
+<p>Errors happen all the time. You will run into errors when you run your code. You will run into error messages when “knitting” your document — as a result, your document will not be generated. To resolve this:</p>
+<ol style="list-style-type: decimal">
+<li>It is important to run each chunk of code separately to ensure that they all work. If any of the chunks throw errors, you will not be able to “knit” your documents.</li>
+<li>When you run into an error, <code>R Markdown</code> panel (usually in the lower left corner of RStudio interface) will tell you in which line the error occurred. You will need to fix it the same way you would in Step 1.</li>
+</ol>
+<p>#### Comments / Commenting out{#ItoR_Comments}</p>
+<p>You do not want to constantly keep [re]installing libraries. So, if a library is already installed, you can “comment out” that line.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="ItoR_00.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;historydata&quot;</span>)</span>
+<span id="cb1-2"><a href="ItoR_00.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>)</span></code></pre></div>
+<p>For example, the code chunk above should become:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="ItoR_00.html#cb2-1" aria-hidden="true" tabindex="-1"></a> <span class="do">##install.packages(&quot;historydata&quot;)</span></span>
+<span id="cb2-2"><a href="ItoR_00.html#cb2-2" aria-hidden="true" tabindex="-1"></a> <span class="do">##install.packages(&quot;dplyr&quot;)</span></span></code></pre></div>
+<p>Adding <code>#</code> in front of a line (or a section of a line) turns it into a <code>comment</code> and it will not longer be executed.</p>
+<p>#### Random errors:{#ItoR_RandomErrors}</p>
+<p>Think about the following two lines of code. Any issues that you can explain? (You might want to run these lines in R to get some clues)</p>
+<ul>
+<li><code>`?median`</code></li>
+<li><code>variable1 &lt;- DigitalHumanities</code></li>
+</ul>
+<p>### Submitting homework{#ItoR_SHW}</p>
+<ul>
+<li>Homework assignment must be submitted by the beginning of the next class;</li>
+<li>Email your homework to the instructor as attachments.
+<ul>
+<li>In the subject of your email, please, add the following: <code>57528-LXX-HW-YourLastName-YourMatriculationNumber</code>, where <code>LXX</code> is the number of the lesson for which you submit homework; <code>YourLastName</code> is your last name; and <code>YourMatriculationNumber</code> is your matriculation number.</li>
+</ul></li>
 </ul>
 
 </div>
@@ -243,8 +346,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="general-tools-and-techniques.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="general-tools-and-techniques.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="introduction-to-python.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -275,7 +378,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/EIS1600/course_TM_R_2022S/edit/main/000-IntroductoryMatters.Rmd",
+"link": "https://github.com/EIS1600/course_TM_R_2022S/edit/main/020-IntroductionToR.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -283,7 +386,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/EIS1600/course_TM_R_2022S/blob/main/000-IntroductoryMatters.Rmd",
+"link": "https://github.com/EIS1600/course_TM_R_2022S/blob/main/020-IntroductionToR.Rmd",
 "text": null
 },
 "download": null,
