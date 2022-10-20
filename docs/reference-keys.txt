@@ -12,7 +12,7 @@ handouts-workbooks
 datacamp-assignments
 schedule
 lesson-topics-subject-to-modifications
-introductory-matters
+introductory-matters-1
 general-tools-and-techniques
 introduction-to-r
 introduction-to-python

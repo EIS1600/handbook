@@ -1,10 +1,10 @@
 --- 
-title: "DH in AAS - TA with R (2022S)"
-author: "Maxim G. Romanov"
+title: "Digital Islamicate Studies Handbook"
+author: ["Maxim G. Romanov", "Peter Verkinderen", "Lisa Mischer"]
 date: "`r Sys.Date()`"
-description: "This is a collection of relevant materials for the class '57-528 ONLINE S: Digital Humanities in African and Asian Studies: Text Analysis with R' (2022S), offered at the University of Hamburg (Afrika-Asien Institut) and taught by Maxim G. Romanov"
-url: 'https\://eis1600.github.io/course_TA_R_2022S/'
-github-repo: "EIS1600/course_TA_R_2022S"
+description: "This is a Handbook for Digital Islamicate Studies. Work in progress, based on tought courses."
+url: 'https\://eis1600.github.io/handbook/'
+github-repo: "EIS1600/handbook"
 apple-touch-icon: "touch-icon.png"
 apple-touch-icon-size: 120
 favicon: "favicon.ico"
@@ -16,7 +16,8 @@ bibliography:
 biblio-style: apalike
 ---
 
-# Syllabus{-}
+# Introductory Matters{-}
+
 
 ## Course Details{-}
 
