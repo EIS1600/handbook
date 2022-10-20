@@ -1,5 +1,6 @@
 # Mac iOS
 .DS_Store
+.kate-swp
 
 # History files
 .Rhistory
