@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>CHAPTER 5 General Introduction | DH in AAS - TA with R (2022S)</title>
+  <title>CHAPTER 4 General Tools and Techniques | DH in AAS - TA with R (2022S)</title>
   <meta name="description" content="This is a collection of relevant materials for the class ‘57-528 ONLINE S: Digital Humanities in African and Asian Studies: Text Analysis with R’ (2022S), offered at the University of Hamburg (Afrika-Asien Institut) and taught by Maxim G. Romanov" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="CHAPTER 5 General Introduction | DH in AAS - TA with R (2022S)" />
+  <meta property="og:title" content="CHAPTER 4 General Tools and Techniques | DH in AAS - TA with R (2022S)" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://eis1600.github.io/course_TA_R_2022S/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="EIS1600/course_TA_R_2022S" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="CHAPTER 5 General Introduction | DH in AAS - TA with R (2022S)" />
+  <meta name="twitter:title" content="CHAPTER 4 General Tools and Techniques | DH in AAS - TA with R (2022S)" />
   
   <meta name="twitter:description" content="This is a collection of relevant materials for the class ‘57-528 ONLINE S: Digital Humanities in African and Asian Studies: Text Analysis with R’ (2022S), offered at the University of Hamburg (Afrika-Asien Institut) and taught by Maxim G. Romanov" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <link rel="apple-touch-icon-precomposed" sizes="120x120" href="touch-icon.png" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<link rel="prev" href="general-tools-and-techniques-2.html"/>
-
+<link rel="prev" href="general-tools-and-techniques-1.html"/>
+<link rel="next" href="general-introduction.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -203,143 +203,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="general-introduction" class="section level1" number="5">
-<h1><span class="header-section-number">CHAPTER 5</span> General Introduction</h1>
-<div id="L01_goals" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Goals</h2>
-<ul>
-<li>Install R and R Studio and start working with them
-<ul>
-<li>R <a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a></li>
-<li>R Studio <a href="https://www.rstudio.com/" class="uri">https://www.rstudio.com/</a></li>
-</ul></li>
-<li>Get to know R Notebooks (R markdown)</li>
-</ul>
-</div>
-<div id="L01_sw" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Software</h2>
-<ul>
-<li>R <a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a></li>
-<li>R Studio <a href="https://www.rstudio.com/" class="uri">https://www.rstudio.com/</a></li>
-</ul>
-</div>
-<div id="L01_class" class="section level2" number="5.3">
-<h2><span class="header-section-number">5.3</span> Class</h2>
-<ul>
-<li>R Studio Interface</li>
-<li>Installing libraries (packages)</li>
-<li>R Notebook elements: combining prose and code</li>
-<li>Converting R Notebook into different formats</li>
-</ul>
-<div id="installing-rmarkdown" class="section level3" number="5.3.1">
-<h3><span class="header-section-number">5.3.1</span> Installing <code>rmarkdown</code></h3>
-<p>Instructions here: <a href="https://bookdown.org/yihui/rmarkdown/installation.html" class="uri">https://bookdown.org/yihui/rmarkdown/installation.html</a></p>
-<p>More information on R Markdown:</p>
-<ul>
-<li><a href="https://rmarkdown.rstudio.com/lesson-1.html" class="uri">https://rmarkdown.rstudio.com/lesson-1.html</a></li>
-<li><a href="https://bookdown.org/yihui/rmarkdown/" class="uri">https://bookdown.org/yihui/rmarkdown/</a></li>
-</ul>
-<!--
-### YAML header
-
-``` r
----
-title: "R Notebook Test"
-output:
-  html_document:
-    df_print: paged
-    toc: true
----
-```
--->
-</div>
-</div>
-<div id="starting-with-our-first-workbook" class="section level2" number="5.4">
-<h2><span class="header-section-number">5.4</span> Starting with our first workbook:</h2>
-<p>Now, download a worksheet file (<a href="./files/ws/01_worksheets_familiar-with-r.Rmd.zip">01_worksheets_familiar-with-r.Rmd.zip</a>). Unzip it and open in <code>RStudio</code>. Let’s work through it!</p>
-<p><strong>NB:</strong> Original worksheets prepared by Lincoln Mullen, GMU (<a href="https://dh-r.lincolnmullen.com/worksheets.html" class="uri">https://dh-r.lincolnmullen.com/worksheets.html</a>)</p>
-</div>
-<div id="L01_topics" class="section level2" number="5.5">
-<h2><span class="header-section-number">5.5</span> Topics covered</h2>
-<ul>
-<li>Values</li>
-<li>Variables</li>
-<li>Vectors</li>
-<li>Built-in functions</li>
-<li>Using the documentation</li>
-<li>Data frames</li>
-<li>Installing and loading packages</li>
-<li>Simple plots</li>
-</ul>
-</div>
-<div id="L01_RM" class="section level2" number="5.6">
-<h2><span class="header-section-number">5.6</span> Reference materials</h2>
-<ul>
-<li><em>R Primer</em> (<a href="https://dh-r.lincolnmullen.com/primer.html" class="uri">https://dh-r.lincolnmullen.com/primer.html</a>) in: Lincoln A. Mullen, <em>Computational Historical Thinking: With Applications in R (2018–):</em> <a href="https://dh-r.lincolnmullen.com" class="uri">https://dh-r.lincolnmullen.com</a>.
-<ul>
-<li>Use the this primer as a quick introduction to the <code>R</code> language, or as a reference for the rest of the course.</li>
-</ul></li>
-<li>The original worksheets have been developed by Lincoln Mullen (<a href="https://dh-r.lincolnmullen.com/worksheets.html" class="uri">https://dh-r.lincolnmullen.com/worksheets.html</a>). The ones used in this class might have undergone some changes and relevant adaptations.</li>
-<li>Your <code>R</code> installation may ‘speak’ your main language. It is nice on one hand, but can be quite inconvenient in class, where the main language is English. You may have to do cast some spells to switch <code>R</code> into English. Possible solutions can be found here: <a href="https://stackoverflow.com/questions/13575180/how-to-change-language-settings-in-r/" class="uri">https://stackoverflow.com/questions/13575180/how-to-change-language-settings-in-r/</a></li>
-</ul>
-</div>
-<div id="L01_HW" class="section level2" number="5.7">
-<h2><span class="header-section-number">5.7</span> Homework</h2>
-<ul>
-<li>Complete the worksheet <em>Getting familiar with R</em>.</li>
-<li>Generate the results into HTML or PDF (PDF is a little bit trickier).</li>
-<li>Start working through the first assigned course in DataCamp (two weeks to complete; requires about 4 hours)</li>
-<li>Submit your homework as described below.</li>
-</ul>
-</div>
-<div id="L01_commonissues" class="section level2" number="5.8">
-<h2><span class="header-section-number">5.8</span> Common issues with homework</h2>
-<div id="tracing-errors" class="section level3" number="5.8.1">
-<h3><span class="header-section-number">5.8.1</span> Tracing errors</h3>
-<p>Errors happen all the time. You will run into errors when you run your code. You will run into error messages when “knitting” your document — as a result, your document will not be generated. To resolve this:</p>
+<div id="general-tools-and-techniques-2" class="section level1" number="4">
+<h1><span class="header-section-number">CHAPTER 4</span> General Tools and Techniques</h1>
+<p>[<em>in progress</em>]</p>
+<p>This chapter introduces the main tools that one wants to be aware of and to be able to use.</p>
 <ol style="list-style-type: decimal">
-<li>It is important to run each chunk of code separately to ensure that they all work. If any of the chunks throw errors, you will not be able to “knit” your documents.</li>
-<li>When you run into an error, <code>R Markdown</code> panel (usually in the lower left corner of RStudio interface) will tell you in which line the error occurred. You will need to fix it the same way you would in Step 1.</li>
+<li>Command Line</li>
+<li>Version Control: git and gitHub</li>
+<li>Sustainable Academic Writing without Proprietary Software</li>
+<li>Robust Searches: regular expressions</li>
+<li>Webscraping</li>
+<li>Structured Data:</li>
 </ol>
-</div>
-<div id="comments-commenting-out" class="section level3" number="5.8.2">
-<h3><span class="header-section-number">5.8.2</span> Comments / Commenting out</h3>
-<p>You do not want to constantly keep [re]installing libraries. So, if a library is already installed, you can “comment out” that line.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="general-introduction.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;historydata&quot;</span>)</span>
-<span id="cb1-2"><a href="general-introduction.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>)</span></code></pre></div>
-<p>For example, the code chunk above should become:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="general-introduction.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages(&quot;historydata&quot;)</span></span>
-<span id="cb2-2"><a href="general-introduction.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages(&quot;dplyr&quot;)</span></span></code></pre></div>
-<p>Adding <code>#</code> in front of a line (or a section of a line) turns it into a <code>comment</code> and it will not longer be executed.</p>
-</div>
-<div id="random-errors" class="section level3" number="5.8.3">
-<h3><span class="header-section-number">5.8.3</span> Random errors:</h3>
-<p>Think about the following two lines of code. Any issues that you can explain? (You might want to run these lines in R to get some clues)</p>
 <ul>
-<li><code>`?median`</code></li>
-<li><code>variable1 &lt;- DigitalHumanities</code></li>
+<li>main formats;</li>
 </ul>
-</div>
-</div>
-<div id="L01_SHW" class="section level2" number="5.9">
-<h2><span class="header-section-number">5.9</span> Submitting homework</h2>
+<ol start="7" style="list-style-type: decimal">
+<li>Simple Analytic Techniques with Python</li>
+</ol>
 <ul>
-<li>Homework assignment must be submitted by the beginning of the next class;</li>
-<li>Email your homework to the instructor as attachments.
+<li>manipulating data (reformatting and extracting);</li>
+<li>basic graphs;</li>
+<li>basic maps;</li>
+</ul>
+<ol start="8" style="list-style-type: decimal">
+<li>Intermediate Analytic Techniques with Python:</li>
+</ol>
 <ul>
-<li>In the subject of your email, please, add the following: <code>57528-LXX-HW-YourLastName-YourMatriculationNumber</code>, where <code>LXX</code> is the number of the lesson for which you submit homework; <code>YourLastName</code> is your last name; and <code>YourMatriculationNumber</code> is your matriculation number.</li>
-</ul></li>
+<li>tf-idf;</li>
+<li>topic modeling;</li>
+<li>social network analysis</li>
 </ul>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="general-tools-and-techniques-2.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="general-tools-and-techniques-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="general-introduction.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -370,7 +273,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/EIS1600/course_TM_R_2022S/edit/main/999-Lesson01.Rmd",
+"link": "https://github.com/EIS1600/course_TM_R_2022S/edit/main/030-IntroductionToPython.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -378,7 +281,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/EIS1600/course_TM_R_2022S/blob/main/999-Lesson01.Rmd",
+"link": "https://github.com/EIS1600/course_TM_R_2022S/blob/main/030-IntroductionToPython.Rmd",
 "text": null
 },
 "download": null,

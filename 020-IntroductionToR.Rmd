@@ -1,0 +1,21 @@
+# General Tools and Techniques
+
+[*in progress*]
+
+This chapter introduces the main tools that one wants to be aware of and to be able to use.
+
+1. Command Line
+2. Version Control: git and gitHub
+3. Sustainable Academic Writing without Proprietary Software
+4. Robust Searches: regular expressions
+5. Webscraping
+6. Structured Data:
+  - main formats;
+7. Simple Analytic Techniques with Python
+  - manipulating data (reformatting and extracting); 
+  - basic graphs;
+  - basic maps;
+8. Intermediate Analytic Techniques with Python:
+  - tf-idf;
+  - topic modeling;
+  - social network analysis
