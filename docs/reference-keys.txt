@@ -14,8 +14,9 @@ schedule
 lesson-topics-subject-to-modifications
 introductory-matters
 general-tools-and-techniques
-general-tools-and-techniques-1
-general-tools-and-techniques-2
+introduction-to-r
+introduction-to-python
+thinking-about-data
 general-introduction
 L01_goals
 L01_sw

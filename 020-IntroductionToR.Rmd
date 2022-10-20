@@ -1,4 +1,4 @@
-# General Tools and Techniques
+# Introduction to R
 
 [*in progress*]
 

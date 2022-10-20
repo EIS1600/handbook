@@ -1,0 +1,10 @@
+# Thinking About Data
+
+[*in progress*]
+
+This chapter introduces the main tools that one wants to be aware of and to be able to use.
+
+1. Preparing Data: Collection, Digitization, etc.
+2. Formatting Data
+3. Organizing Data
+4. Modeling Data
