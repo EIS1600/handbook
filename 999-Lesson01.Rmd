@@ -1,4 +1,4 @@
-# General Introduction
+# Example
 
 ## Goals{#L01_goals}
 

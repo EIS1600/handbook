@@ -17,7 +17,7 @@ general-tools-and-techniques
 introduction-to-r
 introduction-to-python
 thinking-about-data
-general-introduction
+example
 L01_goals
 L01_sw
 L01_class
