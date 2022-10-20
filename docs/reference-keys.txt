@@ -12,6 +12,7 @@ handouts-workbooks
 datacamp-assignments
 schedule
 lesson-topics-subject-to-modifications
+general-tools-and-techniques
 general-introduction
 L01_goals
 L01_sw
