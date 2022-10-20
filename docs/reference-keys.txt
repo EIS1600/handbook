@@ -34,17 +34,3 @@ handouts-workbooks-1
 datacamp-assignments-1
 schedule-1
 lesson-topics-subject-to-modifications-1
-example
-L01_goals
-L01_sw
-L01_class
-installing-rmarkdown
-starting-with-our-first-workbook
-L01_topics
-L01_RM
-L01_HW
-L01_commonissues
-tracing-errors
-comments-commenting-out
-random-errors
-L01_SHW
