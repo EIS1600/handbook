@@ -6,7 +6,7 @@ bookdown::gitbook:
       collapse: section
       scroll_highlight: yes
       before: |
-        <li><a href="./">DH Methods for Middle Eastern Studies: Text Mining with R</a></li>
+        <li><a href="./">Digital Islamicate Studies Handbook</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     download: null
