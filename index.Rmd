@@ -1,0 +1,157 @@
+--- 
+title: "DH in AAS - TA with R (2022S)"
+author: "Maxim G. Romanov"
+date: "`r Sys.Date()`"
+description: "This is a collection of relevant materials for the class '57-528 ONLINE S: Digital Humanities in African and Asian Studies: Text Analysis with R' (2022S), offered at the University of Hamburg (Afrika-Asien Institut) and taught by Maxim G. Romanov"
+url: 'https\://eis1600.github.io/course_TA_R_2022S/'
+github-repo: "EIS1600/course_TA_R_2022S"
+apple-touch-icon: "touch-icon.png"
+apple-touch-icon-size: 120
+favicon: "favicon.ico"
+documentclass: book
+link-citations: yes
+bibliography:
+- book.bib
+- packages.bib
+biblio-style: apalike
+---
+
+# Syllabus{-}
+
+## Course Details{-}
+
+* Course: 57-528 ONLINE S: Digital Humanities in African and Asian Studies: Text Analysis with R (2022S) / 57-528 ONLINE S: Digitale Geisteswissenschaften in den Afrika-Asien-Studien: Textanalyse mit R
+* Language of instruction: English
+* Meeting time: Fr 12:00-14:00
+* Additional meeting time: *we will need to find a time slot when you can all join and work on your HW assignments together*
+* Meeting place: due to COVID, all meetings will be held online via Zoom
+* Meeting link: *shared via Slack*; other details are available via STiNE
+* Office hours: Fr 14:00-15:00 (on Zoom); if you have any questions, please, post them on Slack
+* Instructor: Dr. Maxim Romanov, [maxim.romanov@uni-hamburg.de](maxim.romanov@uni-hamburg.de)
+
+## Aims, Contents and Method of the Course
+
+The course will offer a practical introduction into R programming language, which is currently one of the most popular choices of humanists interested in investigating humanities problems with computational methods. The focus of the course is text analysis. The course will have three main parts: first, you will be introduced to the basics of R; second, you will learn about main text analysis methods; third, you will work on your own text analysis project. The language of the course is English.
+
+Personal computers are required both for in-class work and for your homework (running full versions of either Windows, MacOS, or Linux; unfortunately, neither tablets nor Chrome-based laptops are suitable for this course). No prior programming experience is required, but familiarity with the command line and basic principles of programming will be beneficial.
+
+## Course Evaluation 
+
+Course evaluation will be a combination of:
+
+- in-class participation (30%),
+- weekly homework workbooks (25%),
+- DataCamp courses (25%),
+- and the final project (20%).
+
+Final projects can be prepared either individually or in groups.
+
+### DataCamp
+
+This class is supported by [DataCamp](https://www.datacamp.com/), the most intuitive learning platform for data science and analytics. Learn any time, anywhere and become an expert in R, Python, SQL, and more. DataCamp’s learn-by-doing methodology combines short expert videos and hands-on-the-keyboard exercises to help learners retain knowledge. DataCamp offers 350+ courses by expert instructors on topics such as importing data, data visualization, and machine learning. They’re constantly expanding their curriculum to keep up with the latest technology trends and to provide the best learning experience for all skill levels. Join over 6 million learners around the world and close your skills gap.
+
+You should all get access to [DataCamp](https://www.datacamp.com/) for the durations of the semester. If you cannot access it, please, contact me as soon as possible.
+
+![DataCamp](./images/DataCamp_For_The_Classroom_2_lobb1p.png.jpeg)
+
+## Class Participation
+
+Each class session will consist in large part of practical hands-on exercises led by the instructor. BRING YOUR LAPTOP! We will accommodate whatever operating system you use (Windows, Mac, Linux), but it should be a laptop rather than a tablet. Don’t forget that asking for help counts as participation!
+
+## Homework
+
+Just as in research and real life, collaboration is a very good way to learn and is therefore encouraged. If you need help with any assignment, you are welcome to ask a fellow student. If you do work together on homework assignments, then when you submit it please include a brief note (just a sentence or two) to indicate who did what.
+
+**NB:** On submitting homework, see below.
+
+## Final Project
+
+Final project will be discussed later. You will have an option to build on what we will be doing in class, but you are most encouraged to pick a topic of your own. The best option will be to work on something relevant to your field of study, your term paper or your thesis.
+
+## Practice Worksheets (R Notebooks)
+
+- [01_worksheets_familiar-with-r.Rmd.zip](./files/ws/01_worksheets_familiar-with-r.Rmd.zip)
+- [02_worksheets_data-structures.Rmd.zip](./files/ws/02_worksheets_data-structures.Rmd.zip)
+- [03_worksheets_data-manipulation-introduction.Rmd.zip](./files/ws/03_worksheets_data-manipulation-introduction.Rmd.zip)
+- [04_worksheets_data-manipulation-continued.Rmd.zip](./files/ws/04_worksheets_data-manipulation-continued.Rmd.zip)
+- [05_worksheets_ggplot2-introduction-MGR-mod.Rmd.zip](./files/ws/05_worksheets_ggplot2-introduction-MGR-mod.Rmd.zip)
+- [06_worksheets_functions.Rmd.zip](./files/ws/06_worksheets_functions.Rmd.zip)
+
+*NB*: Worksheets 1-6 have been developed by Lincoln Mullen. Source: Lincoln A. Mullen, *Computational Historical Thinking: With Applications in R (2018–)*: <http://dh-r.lincolnmullen.com>.
+
+## Additional Study Materials
+
+* Silge, Julia, and David Robinson. *Text Mining with R: a Tidy Approach* <https://www.tidytextmining.com/>
+* Jockers, Matthew L. *Text Analysis with R for Students of Literature*. New York: Springer, 2014 (shared via Slack)
+* Arnold, Taylor, and Lauren Tilton. *Humanities Data in R*. New York, NY: Springer Science+Business Media, 2015 (shared via Slack)
+* Healy, Kieran. *Data Visualization: A Practical Guide.* Princeton University Press, 2018. ISBN: 978-0691181622. <http://socviz.co/>
+* Hadley Wickham & Garrett Grolemund, *R for Data Science: Import, Tidy, Transform, Visualize, and Model Data.* O’Reilly, 2017. ISBN: 978-1491910399. <https://r4ds.had.co.nz/>
+* Wickham, Hadley. *Advanced R*, Second Edition. 2 edition. Boca Raton: Chapman and Hall/CRC, 2019. <http://adv-r.had.co.nz/>
+* Also check <https://bookdown.org/> for more books on R
+* *Coding Club R Tutorials* (focus on Ecology and Environmental Sciences), <https://ourcodingclub.github.io/tutorials.html>
+
+*NB:* By the way, this website is also built with R. Check: Yihui Xie. *bookdown: Authoring Books and Technical Documents with R Markdown*, 2022 <https://bookdown.org/yihui/bookdown/>
+
+## Software, Tools, & Technologies:
+
+The following is the list of software, applications and packages that we will be using in the course. Make sure to have them installed by the class when we are supposed to use them.
+
+The main tools for the course will be the programming language `R` and `RStudio`, the premier integrated development environment for `R`.
+
+- `R`: <https://cloud.r-project.org/> (choose the version for your operating system!)
+- `RStudio`: <https://rstudio.com/products/rstudio/download/> (RStudio Desktop, Open Source License — the free version)
+
+We will also use a variety of packages for `R`, which we will be installing when necessary.
+
+## Submitting Homework:
+
+### Handouts / Workbooks
+
+* Homework assignments are to be submitted by the beginning of the next class;
+* For the first few classes you must email them to the instructor (as attachments)
+* Later, you will be publishing your homework assignments on your github pages and sending an email to the instructor informing that you have completed your homework and providing a relevant github link.
+	*  In the subject of your email, please, use the following format: `CourseID-LessonID-HW-Lastname-matriculationNumber`, for example, if I were to submit homework for the first lesson, my subject header would look like: `070112-L01-HW-Romanov-12435687`.
+* DH is a collaborative field, so you are most welcome to work on your homework assignments in groups, however, you must still submit it. That is, if a groups of three works on one assignment, there must be three separate submissions: either emailed from each member’s email and published at each member’s github page. 
+
+### DataCamp Assignments
+
+* you are also assigned six four-hour interactive courses on different aspects of R on the educational platform DataCamp (<www.datacamp.com>); i.e., approximately one 4-hour course every two weeks. 
+* there are deadlines for each course, which are arranged in terms of your general progress (from introductory to intermediate).
+* while you are enrolled in this course, you can also use any other courses on the DataCamp platform free of charge. I strongly recommend you to take advantage of this opportunity.
+
+## Schedule
+
+**Location**: Online
+
+- 01 — Fri, 08. Apr. 2022 — 12:00—14:00
+- XX — Fri, 15. Apr. 2022 — Good Friday
+- 02 — Fri, 22. Apr. 2022 — 12:00—14:00
+- 03 — Fri, 29. Apr. 2022 — 12:00—14:00
+- 04 — Fri, 06. May  2022 — 12:00—14:00
+- 05 — Fri, 13. May  2022 — 12:00—14:00
+- 06 — Fri, 20. May  2022 — 12:00—14:00
+- XX - Fri, 27. May  2022 - Ascension Weekend
+- 07 — Fri, 03. Jun. 2022 — 12:00—14:00
+- 08 — Fri, 10. Jun. 2022 — 12:00—14:00
+- 09 — Fri, 17. Jun. 2022 — 12:00—14:00
+- 10 — Fri, 24. Jun. 2022 — 12:00—14:00
+- 11 — Fri, 01. Jul. 2022 — 12:00—14:00
+- 12 — Fri, 08. Jul. 2022 — 12:00—14:00
+- 13 — Fri, 15. Jul. 2022 — 12:00—14:00
+
+## Lesson Topics (*subject to modifications*)
+
+- **[ `#01` ]** General Introduction: Making Sure Everything Works; Getting to know R
+- **[ `#02` ]** Basics I: Data Structures and Subsetting
+- **[ `#03` ]** Basics II: Data Manipulation & Exloratory Analysis
+- **[ `#04` ]** Basics III: Data Visualization; Functions
+- **[ `#05` ]** Data I: Collecting, Organizing, Creating
+- **[ `#06` ]** Data II: Modeling & Manipulating
+- **[ `#07` ]** Text Analysis Methods I: Words, Ngrams, KWIC, etc.
+- **[ `#08` ]** Text Analysis Methods II: TF-IDF and other Similarity Measures
+- **[ `#09` ]** Text Analysis Methods III: Topic Modeling
+- **[ `#10` ]** Text Analysis Methods IV: Stylometric Analysis
+- **[ `#11` ]** Projects I
+- **[ `#12` ]** Projects II
+- **[ `#13` ]** Projects III
+

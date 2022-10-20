@@ -1,0 +1,30 @@
+bookdown::gitbook:
+  highlight: pygments
+  css: style.css
+  config:
+    toc:
+      collapse: section
+      scroll_highlight: yes
+      before: |
+        <li><a href="./">DH Methods for Middle Eastern Studies: Text Mining with R</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    download: null
+    toolbar:
+      position: fixed
+    edit : null
+    search: yes
+    fontsettings:
+      theme: white
+      family: serif
+      size: 2
+    sharing:
+      facebook: yes
+      github: yes
+      twitter: yes
+      linkedin: no
+      weibo: no
+      instapaper: no
+      vk: no
+      all: ['facebook', 'twitter', 'github']
+    info: yes
