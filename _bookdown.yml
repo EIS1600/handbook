@@ -17,6 +17,7 @@ site: "bookdown::bookdown_site"
 output:
   bookdown::gitbook:
     lib_dir: "book_assets"
+    toc_depth: 2
   bookdown::pdf_book:
     keep_tex: yes
   bookdown::epub_book: default
