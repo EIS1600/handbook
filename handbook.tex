@@ -1,0 +1,579 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={DH in AAS - TA with R (2022S)},
+  pdfauthor={Maxim G. Romanov},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{DH in AAS - TA with R (2022S)}
+\author{Maxim G. Romanov}
+\date{2022-10-20}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{syllabus}{%
+\chapter*{Syllabus}\label{syllabus}}
+\addcontentsline{toc}{chapter}{Syllabus}
+
+\hypertarget{course-details}{%
+\section*{Course Details}\label{course-details}}
+\addcontentsline{toc}{section}{Course Details}
+
+\begin{itemize}
+\tightlist
+\item
+  Course: 57-528 ONLINE S: Digital Humanities in African and Asian Studies: Text Analysis with R (2022S) / 57-528 ONLINE S: Digitale Geisteswissenschaften in den Afrika-Asien-Studien: Textanalyse mit R
+\item
+  Language of instruction: English
+\item
+  Meeting time: Fr 12:00-14:00
+\item
+  Additional meeting time: \emph{we will need to find a time slot when you can all join and work on your HW assignments together}
+\item
+  Meeting place: due to COVID, all meetings will be held online via Zoom
+\item
+  Meeting link: \emph{shared via Slack}; other details are available via STiNE
+\item
+  Office hours: Fr 14:00-15:00 (on Zoom); if you have any questions, please, post them on Slack
+\item
+  Instructor: Dr.~Maxim Romanov, \url{maxim.romanov@uni-hamburg.de}
+\end{itemize}
+
+\hypertarget{aims-contents-and-method-of-the-course}{%
+\section{Aims, Contents and Method of the Course}\label{aims-contents-and-method-of-the-course}}
+
+The course will offer a practical introduction into R programming language, which is currently one of the most popular choices of humanists interested in investigating humanities problems with computational methods. The focus of the course is text analysis. The course will have three main parts: first, you will be introduced to the basics of R; second, you will learn about main text analysis methods; third, you will work on your own text analysis project. The language of the course is English.
+
+Personal computers are required both for in-class work and for your homework (running full versions of either Windows, MacOS, or Linux; unfortunately, neither tablets nor Chrome-based laptops are suitable for this course). No prior programming experience is required, but familiarity with the command line and basic principles of programming will be beneficial.
+
+\hypertarget{course-evaluation}{%
+\section{Course Evaluation}\label{course-evaluation}}
+
+Course evaluation will be a combination of:
+
+\begin{itemize}
+\tightlist
+\item
+  in-class participation (30\%),
+\item
+  weekly homework workbooks (25\%),
+\item
+  DataCamp courses (25\%),
+\item
+  and the final project (20\%).
+\end{itemize}
+
+Final projects can be prepared either individually or in groups.
+
+\hypertarget{datacamp}{%
+\subsection{DataCamp}\label{datacamp}}
+
+This class is supported by \href{https://www.datacamp.com/}{DataCamp}, the most intuitive learning platform for data science and analytics. Learn any time, anywhere and become an expert in R, Python, SQL, and more. DataCamp's learn-by-doing methodology combines short expert videos and hands-on-the-keyboard exercises to help learners retain knowledge. DataCamp offers 350+ courses by expert instructors on topics such as importing data, data visualization, and machine learning. They're constantly expanding their curriculum to keep up with the latest technology trends and to provide the best learning experience for all skill levels. Join over 6 million learners around the world and close your skills gap.
+
+You should all get access to \href{https://www.datacamp.com/}{DataCamp} for the durations of the semester. If you cannot access it, please, contact me as soon as possible.
+
+\begin{figure}
+\centering
+\includegraphics{./images/DataCamp_For_The_Classroom_2_lobb1p.png.jpeg}
+\caption{DataCamp}
+\end{figure}
+
+\hypertarget{class-participation}{%
+\section{Class Participation}\label{class-participation}}
+
+Each class session will consist in large part of practical hands-on exercises led by the instructor. BRING YOUR LAPTOP! We will accommodate whatever operating system you use (Windows, Mac, Linux), but it should be a laptop rather than a tablet. Don't forget that asking for help counts as participation!
+
+\hypertarget{homework}{%
+\section{Homework}\label{homework}}
+
+Just as in research and real life, collaboration is a very good way to learn and is therefore encouraged. If you need help with any assignment, you are welcome to ask a fellow student. If you do work together on homework assignments, then when you submit it please include a brief note (just a sentence or two) to indicate who did what.
+
+\textbf{NB:} On submitting homework, see below.
+
+\hypertarget{final-project}{%
+\section{Final Project}\label{final-project}}
+
+Final project will be discussed later. You will have an option to build on what we will be doing in class, but you are most encouraged to pick a topic of your own. The best option will be to work on something relevant to your field of study, your term paper or your thesis.
+
+\hypertarget{practice-worksheets-r-notebooks}{%
+\section{Practice Worksheets (R Notebooks)}\label{practice-worksheets-r-notebooks}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{./files/ws/01_worksheets_familiar-with-r.Rmd.zip}{01\_worksheets\_familiar-with-r.Rmd.zip}
+\item
+  \href{./files/ws/02_worksheets_data-structures.Rmd.zip}{02\_worksheets\_data-structures.Rmd.zip}
+\item
+  \href{./files/ws/03_worksheets_data-manipulation-introduction.Rmd.zip}{03\_worksheets\_data-manipulation-introduction.Rmd.zip}
+\item
+  \href{./files/ws/04_worksheets_data-manipulation-continued.Rmd.zip}{04\_worksheets\_data-manipulation-continued.Rmd.zip}
+\item
+  \href{./files/ws/05_worksheets_ggplot2-introduction-MGR-mod.Rmd.zip}{05\_worksheets\_ggplot2-introduction-MGR-mod.Rmd.zip}
+\item
+  \href{./files/ws/06_worksheets_functions.Rmd.zip}{06\_worksheets\_functions.Rmd.zip}
+\end{itemize}
+
+\emph{NB}: Worksheets 1-6 have been developed by Lincoln Mullen. Source: Lincoln A. Mullen, \emph{Computational Historical Thinking: With Applications in R (2018--)}: \url{http://dh-r.lincolnmullen.com}.
+
+\hypertarget{additional-study-materials}{%
+\section{Additional Study Materials}\label{additional-study-materials}}
+
+\begin{itemize}
+\tightlist
+\item
+  Silge, Julia, and David Robinson. \emph{Text Mining with R: a Tidy Approach} \url{https://www.tidytextmining.com/}
+\item
+  Jockers, Matthew L. \emph{Text Analysis with R for Students of Literature}. New York: Springer, 2014 (shared via Slack)
+\item
+  Arnold, Taylor, and Lauren Tilton. \emph{Humanities Data in R}. New York, NY: Springer Science+Business Media, 2015 (shared via Slack)
+\item
+  Healy, Kieran. \emph{Data Visualization: A Practical Guide.} Princeton University Press, 2018. ISBN: 978-0691181622. \url{http://socviz.co/}
+\item
+  Hadley Wickham \& Garrett Grolemund, \emph{R for Data Science: Import, Tidy, Transform, Visualize, and Model Data.} O'Reilly, 2017. ISBN: 978-1491910399. \url{https://r4ds.had.co.nz/}
+\item
+  Wickham, Hadley. \emph{Advanced R}, Second Edition. 2 edition. Boca Raton: Chapman and Hall/CRC, 2019. \url{http://adv-r.had.co.nz/}
+\item
+  Also check \url{https://bookdown.org/} for more books on R
+\item
+  \emph{Coding Club R Tutorials} (focus on Ecology and Environmental Sciences), \url{https://ourcodingclub.github.io/tutorials.html}
+\end{itemize}
+
+\emph{NB:} By the way, this website is also built with R. Check: Yihui Xie. \emph{bookdown: Authoring Books and Technical Documents with R Markdown}, 2022 \url{https://bookdown.org/yihui/bookdown/}
+
+\hypertarget{software-tools-technologies}{%
+\section{Software, Tools, \& Technologies:}\label{software-tools-technologies}}
+
+The following is the list of software, applications and packages that we will be using in the course. Make sure to have them installed by the class when we are supposed to use them.
+
+The main tools for the course will be the programming language \texttt{R} and \texttt{RStudio}, the premier integrated development environment for \texttt{R}.
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{R}: \url{https://cloud.r-project.org/} (choose the version for your operating system!)
+\item
+  \texttt{RStudio}: \url{https://rstudio.com/products/rstudio/download/} (RStudio Desktop, Open Source License --- the free version)
+\end{itemize}
+
+We will also use a variety of packages for \texttt{R}, which we will be installing when necessary.
+
+\hypertarget{submitting-homework}{%
+\section{Submitting Homework:}\label{submitting-homework}}
+
+\hypertarget{handouts-workbooks}{%
+\subsection{Handouts / Workbooks}\label{handouts-workbooks}}
+
+\begin{itemize}
+\tightlist
+\item
+  Homework assignments are to be submitted by the beginning of the next class;
+\item
+  For the first few classes you must email them to the instructor (as attachments)
+\item
+  Later, you will be publishing your homework assignments on your github pages and sending an email to the instructor informing that you have completed your homework and providing a relevant github link.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    In the subject of your email, please, use the following format: \texttt{CourseID-LessonID-HW-Lastname-matriculationNumber}, for example, if I were to submit homework for the first lesson, my subject header would look like: \texttt{070112-L01-HW-Romanov-12435687}.
+  \end{itemize}
+\item
+  DH is a collaborative field, so you are most welcome to work on your homework assignments in groups, however, you must still submit it. That is, if a groups of three works on one assignment, there must be three separate submissions: either emailed from each member's email and published at each member's github page.
+\end{itemize}
+
+\hypertarget{datacamp-assignments}{%
+\subsection{DataCamp Assignments}\label{datacamp-assignments}}
+
+\begin{itemize}
+\tightlist
+\item
+  you are also assigned six four-hour interactive courses on different aspects of R on the educational platform DataCamp (\textless www.datacamp.com\textgreater); i.e., approximately one 4-hour course every two weeks.
+\item
+  there are deadlines for each course, which are arranged in terms of your general progress (from introductory to intermediate).
+\item
+  while you are enrolled in this course, you can also use any other courses on the DataCamp platform free of charge. I strongly recommend you to take advantage of this opportunity.
+\end{itemize}
+
+\hypertarget{schedule}{%
+\section{Schedule}\label{schedule}}
+
+\textbf{Location}: Online
+
+\begin{itemize}
+\tightlist
+\item
+  01 --- Fri, 08. Apr.~2022 --- 12:00---14:00
+\item
+  XX --- Fri, 15. Apr.~2022 --- Good Friday
+\item
+  02 --- Fri, 22. Apr.~2022 --- 12:00---14:00
+\item
+  03 --- Fri, 29. Apr.~2022 --- 12:00---14:00
+\item
+  04 --- Fri, 06. May 2022 --- 12:00---14:00
+\item
+  05 --- Fri, 13. May 2022 --- 12:00---14:00
+\item
+  06 --- Fri, 20. May 2022 --- 12:00---14:00
+\item
+  XX - Fri, 27. May 2022 - Ascension Weekend
+\item
+  07 --- Fri, 03. Jun.~2022 --- 12:00---14:00
+\item
+  08 --- Fri, 10. Jun.~2022 --- 12:00---14:00
+\item
+  09 --- Fri, 17. Jun.~2022 --- 12:00---14:00
+\item
+  10 --- Fri, 24. Jun.~2022 --- 12:00---14:00
+\item
+  11 --- Fri, 01. Jul.~2022 --- 12:00---14:00
+\item
+  12 --- Fri, 08. Jul.~2022 --- 12:00---14:00
+\item
+  13 --- Fri, 15. Jul.~2022 --- 12:00---14:00
+\end{itemize}
+
+\hypertarget{lesson-topics-subject-to-modifications}{%
+\section{\texorpdfstring{Lesson Topics (\emph{subject to modifications})}{Lesson Topics (subject to modifications)}}\label{lesson-topics-subject-to-modifications}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{{[} \texttt{\#01} {]}} General Introduction: Making Sure Everything Works; Getting to know R
+\item
+  \textbf{{[} \texttt{\#02} {]}} Basics I: Data Structures and Subsetting
+\item
+  \textbf{{[} \texttt{\#03} {]}} Basics II: Data Manipulation \& Exloratory Analysis
+\item
+  \textbf{{[} \texttt{\#04} {]}} Basics III: Data Visualization; Functions
+\item
+  \textbf{{[} \texttt{\#05} {]}} Data I: Collecting, Organizing, Creating
+\item
+  \textbf{{[} \texttt{\#06} {]}} Data II: Modeling \& Manipulating
+\item
+  \textbf{{[} \texttt{\#07} {]}} Text Analysis Methods I: Words, Ngrams, KWIC, etc.
+\item
+  \textbf{{[} \texttt{\#08} {]}} Text Analysis Methods II: TF-IDF and other Similarity Measures
+\item
+  \textbf{{[} \texttt{\#09} {]}} Text Analysis Methods III: Topic Modeling
+\item
+  \textbf{{[} \texttt{\#10} {]}} Text Analysis Methods IV: Stylometric Analysis
+\item
+  \textbf{{[} \texttt{\#11} {]}} Projects I
+\item
+  \textbf{{[} \texttt{\#12} {]}} Projects II
+\item
+  \textbf{{[} \texttt{\#13} {]}} Projects III
+\end{itemize}
+
+\hypertarget{general-introduction}{%
+\chapter{General Introduction}\label{general-introduction}}
+
+\hypertarget{L01_goals}{%
+\section{Goals}\label{L01_goals}}
+
+\begin{itemize}
+\tightlist
+\item
+  Install R and R Studio and start working with them
+
+  \begin{itemize}
+  \tightlist
+  \item
+    R \url{https://www.r-project.org/}
+  \item
+    R Studio \url{https://www.rstudio.com/}
+  \end{itemize}
+\item
+  Get to know R Notebooks (R markdown)
+\end{itemize}
+
+\hypertarget{L01_sw}{%
+\section{Software}\label{L01_sw}}
+
+\begin{itemize}
+\tightlist
+\item
+  R \url{https://www.r-project.org/}
+\item
+  R Studio \url{https://www.rstudio.com/}
+\end{itemize}
+
+\hypertarget{L01_class}{%
+\section{Class}\label{L01_class}}
+
+\begin{itemize}
+\tightlist
+\item
+  R Studio Interface
+\item
+  Installing libraries (packages)
+\item
+  R Notebook elements: combining prose and code
+\item
+  Converting R Notebook into different formats
+\end{itemize}
+
+\hypertarget{installing-rmarkdown}{%
+\subsection{\texorpdfstring{Installing \texttt{rmarkdown}}{Installing rmarkdown}}\label{installing-rmarkdown}}
+
+Instructions here: \url{https://bookdown.org/yihui/rmarkdown/installation.html}
+
+More information on R Markdown:
+
+\begin{itemize}
+\tightlist
+\item
+  \url{https://rmarkdown.rstudio.com/lesson-1.html}
+\item
+  \url{https://bookdown.org/yihui/rmarkdown/}
+\end{itemize}
+
+\hypertarget{starting-with-our-first-workbook}{%
+\section{Starting with our first workbook:}\label{starting-with-our-first-workbook}}
+
+Now, download a worksheet file (\href{./files/ws/01_worksheets_familiar-with-r.Rmd.zip}{01\_worksheets\_familiar-with-r.Rmd.zip}). Unzip it and open in \texttt{RStudio}. Let's work through it!
+
+\textbf{NB:} Original worksheets prepared by Lincoln Mullen, GMU (\url{https://dh-r.lincolnmullen.com/worksheets.html})
+
+\hypertarget{L01_topics}{%
+\section{Topics covered}\label{L01_topics}}
+
+\begin{itemize}
+\tightlist
+\item
+  Values
+\item
+  Variables
+\item
+  Vectors
+\item
+  Built-in functions
+\item
+  Using the documentation
+\item
+  Data frames
+\item
+  Installing and loading packages
+\item
+  Simple plots
+\end{itemize}
+
+\hypertarget{L01_RM}{%
+\section{Reference materials}\label{L01_RM}}
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{R Primer} (\url{https://dh-r.lincolnmullen.com/primer.html}) in: Lincoln A. Mullen, \emph{Computational Historical Thinking: With Applications in R (2018--):} \url{https://dh-r.lincolnmullen.com}.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Use the this primer as a quick introduction to the \texttt{R} language, or as a reference for the rest of the course.
+  \end{itemize}
+\item
+  The original worksheets have been developed by Lincoln Mullen (\url{https://dh-r.lincolnmullen.com/worksheets.html}). The ones used in this class might have undergone some changes and relevant adaptations.
+\item
+  Your \texttt{R} installation may `speak' your main language. It is nice on one hand, but can be quite inconvenient in class, where the main language is English. You may have to do cast some spells to switch \texttt{R} into English. Possible solutions can be found here: \url{https://stackoverflow.com/questions/13575180/how-to-change-language-settings-in-r/}
+\end{itemize}
+
+\hypertarget{L01_HW}{%
+\section{Homework}\label{L01_HW}}
+
+\begin{itemize}
+\tightlist
+\item
+  Complete the worksheet \emph{Getting familiar with R}.
+\item
+  Generate the results into HTML or PDF (PDF is a little bit trickier).
+\item
+  Start working through the first assigned course in DataCamp (two weeks to complete; requires about 4 hours)
+\item
+  Submit your homework as described below.
+\end{itemize}
+
+\hypertarget{L01_commonissues}{%
+\section{Common issues with homework}\label{L01_commonissues}}
+
+\hypertarget{tracing-errors}{%
+\subsection{Tracing errors}\label{tracing-errors}}
+
+Errors happen all the time. You will run into errors when you run your code. You will run into error messages when ``knitting'' your document --- as a result, your document will not be generated. To resolve this:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  It is important to run each chunk of code separately to ensure that they all work. If any of the chunks throw errors, you will not be able to ``knit'' your documents.
+\item
+  When you run into an error, \texttt{R\ Markdown} panel (usually in the lower left corner of RStudio interface) will tell you in which line the error occurred. You will need to fix it the same way you would in Step 1.
+\end{enumerate}
+
+\hypertarget{comments-commenting-out}{%
+\subsection{Comments / Commenting out}\label{comments-commenting-out}}
+
+You do not want to constantly keep {[}re{]}installing libraries. So, if a library is already installed, you can ``comment out'' that line.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{"historydata"}\NormalTok{)}
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{"dplyr"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+For example, the code chunk above should become:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#install.packages("historydata")}
+\CommentTok{\#install.packages("dplyr")}
+\end{Highlighting}
+\end{Shaded}
+
+Adding \texttt{\#} in front of a line (or a section of a line) turns it into a \texttt{comment} and it will not longer be executed.
+
+\hypertarget{random-errors}{%
+\subsection{Random errors:}\label{random-errors}}
+
+Think about the following two lines of code. Any issues that you can explain? (You might want to run these lines in R to get some clues)
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{\textasciigrave{}?median\textasciigrave{}}
+\item
+  \texttt{variable1\ \textless{}-\ DigitalHumanities}
+\end{itemize}
+
+\hypertarget{L01_SHW}{%
+\section{Submitting homework}\label{L01_SHW}}
+
+\begin{itemize}
+\tightlist
+\item
+  Homework assignment must be submitted by the beginning of the next class;
+\item
+  Email your homework to the instructor as attachments.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    In the subject of your email, please, add the following: \texttt{57528-LXX-HW-YourLastName-YourMatriculationNumber}, where \texttt{LXX} is the number of the lesson for which you submit homework; \texttt{YourLastName} is your last name; and \texttt{YourMatriculationNumber} is your matriculation number.
+  \end{itemize}
+\end{itemize}
+
+\end{document}
