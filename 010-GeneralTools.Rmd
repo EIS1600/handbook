@@ -11,11 +11,11 @@ This chapter introduces the main tools that one wants to be aware of and to be a
 5. Webscraping
 6. Structured Data:
   - main formats;
-7. Simple Analytical Techniques with Python
-  - manupulating data (reformatting and extracting); 
+7. Simple Analytic Techniques with Python
+  - manipulating data (reformatting and extracting); 
   - basic graphs;
   - basic maps;
-8. Intermmediate Analytical Techniques with Python:
+8. Intermediate Analytic Techniques with Python:
   - tf-idf;
   - topic modeling;
   - social network analysis
