@@ -23,14 +23,16 @@ Just to give you an idea, these are some examples of visualizations that result 
 
 *Periods of Prosperity of Islamic Cities*
 
-![](./images/rgis_examples/_MAKKA_398E213N_S_TI_0_700.png)
-![](./images/rgis_examples/_BAGHDAD_443E333N_S_TI_0_700.png)
+![](./images/rgis_examples/c_MAKKA_398E213N_S_TI_0_700.png)
+![](./images/rgis_examples/c_BAGHDAD_443E333N_S_TI_0_700.png)
 
-![](./images/rgis_examples/_DIMASHQ_363E335N_S_TI_0_700.png)
+![](./images/rgis_examples/c_DIMASHQ_363E335N_S_TI_0_700.png)
+
 **Interregional Connections, Islamic world (600-1300 CE)**
 
 ![](./images/rgis_examples/TI_InterregionalConns_700Y_100Y_000_100.png)
 ![](./images/rgis_examples/TI_InterregionalConns_700Y_100Y_500_600.png)
+
 **Networks of Islamic Cities**
 
 ![](./images/rgis_examples/TI_UrbanClusters_700Y_louvain_100_200.png)
