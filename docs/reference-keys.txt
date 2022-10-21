@@ -19,3 +19,4 @@ thinking-about-data
 research-methods-in-r
 research-methods-in-python
 practice-worksheets-r-notebooks
+study-materials
