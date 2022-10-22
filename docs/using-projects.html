@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>CHAPTER 2 General Tools and Techniques | Digital Islamicate Studies Handbook</title>
+  <title>3.2 Using “Projects” | Digital Islamicate Studies Handbook</title>
   <meta name="description" content="This is a Handbook for Digital Islamicate Studies. Work in progress, based on tought courses." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="CHAPTER 2 General Tools and Techniques | Digital Islamicate Studies Handbook" />
+  <meta property="og:title" content="3.2 Using “Projects” | Digital Islamicate Studies Handbook" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://eis1600.github.io/handbook/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="EIS1600/handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="CHAPTER 2 General Tools and Techniques | Digital Islamicate Studies Handbook" />
+  <meta name="twitter:title" content="3.2 Using “Projects” | Digital Islamicate Studies Handbook" />
   
   <meta name="twitter:description" content="This is a Handbook for Digital Islamicate Studies. Work in progress, based on tought courses." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <link rel="apple-touch-icon-precomposed" sizes="120x120" href="touch-icon.png" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<link rel="prev" href="introductory-matters.html"/>
-<link rel="next" href="ItoR_00.html"/>
+<link rel="prev" href="r-installation.html"/>
+<link rel="next" href="general-introduction.html"/>
 <script src="libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -202,46 +202,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="general-tools-and-techniques" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">CHAPTER 2</span> General Tools and Techniques<a href="general-tools-and-techniques.html#general-tools-and-techniques" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>[<em>in progress</em>]</p>
-<p>This chapter introduces the main tools that one wants to be aware of and to be able to use.</p>
-<ol style="list-style-type: decimal">
-<li>Command Line</li>
-<li>Version Control: git and gitHub</li>
-<li>Sustainable Academic Writing without Proprietary Software</li>
-<li>Robust Searches: regular expressions</li>
-<li>Webscraping</li>
-<li>Structured Data:</li>
-</ol>
+<div id="using-projects" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Using “Projects”<a href="using-projects.html#using-projects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Projects are a very convenient feature of RStudio. The idea is very simple—Rstudio ties all settings to a specific folder, which makes it much easier to work with files kept in the same folder. How to use projects?</p>
 <ul>
-<li>main formats;</li>
-</ul>
-<ol start="7" style="list-style-type: decimal">
-<li>Simple Analytic Techniques with Python</li>
-</ol>
+<li>create a folder somewhere on your computer; let’s call that folder “My_First_R_Project”, for further reference.</li>
+<li>move files that you are going to work with into that folder;</li>
+<li>open RStudio, then:
 <ul>
-<li>manipulating data (reformatting and extracting);</li>
-<li>basic graphs;</li>
-<li>basic maps;</li>
-</ul>
-<ol start="8" style="list-style-type: decimal">
-<li>Intermediate Analytic Techniques with Python:</li>
-</ol>
+<li>File &gt; New Project &gt;
+<img src="images/r_instructions/new_project.png" /></li>
+<li>Select “Existing Directory” &gt; then click on “Browse”, and then select the folder “My_First_R_Project”, which you created in the first step; click “Create Project” to complete the process.</li>
+</ul></li>
+<li>Now, what will happen is that in the tab “Files” in the lower right part of RStudio you will see the contents of the folder “My_First_R_Project”. There will also be a new file, called “My_First_R_Project.Rproj”.
 <ul>
-<li>tf-idf;</li>
-<li>topic modeling;</li>
-<li>social network analysis</li>
+<li>Later on, you will be able to quickly open your project by double-clicking on that file.</li>
+<li>When you open te project, R automatically sets the working directory (<code>setwd()</code>) to the folder of the project and many things just become much easier.</li>
+</ul></li>
+<li>Now, you can add and create new files relevant to your project in the folder “My_First_R_Project” and they will be easy to find directly from RStudio, using its “Files” Tab, which is usually available in the lower right corner.
+<ul>
+<li>you will benefit greatly from keeping some order in the project folder. For example, keep all you data files in a subfolder “data”; your images in a subfolder “images”, and so on.</li>
+</ul></li>
 </ul>
-
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="introductory-matters.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="ItoR_00.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="r-installation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="general-introduction.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -272,7 +262,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/EIS1600/course_TM_R_2022S/edit/main/010-GeneralTools.Rmd",
+"link": "https://github.com/EIS1600/course_TM_R_2022S/edit/main/020-IntroductionToR.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -280,7 +270,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/EIS1600/course_TM_R_2022S/blob/main/010-GeneralTools.Rmd",
+"link": "https://github.com/EIS1600/course_TM_R_2022S/blob/main/020-IntroductionToR.Rmd",
 "text": null
 },
 "download": null,

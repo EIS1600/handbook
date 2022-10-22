@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>UHH AAI WiSe 22/23, 57-525 Online S: Digital Humanities — GIS with R | Digital Islamicate Studies Handbook</title>
+  <meta name="description" content="This is a Handbook for Digital Islamicate Studies. Work in progress, based on tought courses." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="UHH AAI WiSe 22/23, 57-525 Online S: Digital Humanities — GIS with R | Digital Islamicate Studies Handbook" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://eis1600.github.io/handbook/" />
+  
+  <meta property="og:description" content="This is a Handbook for Digital Islamicate Studies. Work in progress, based on tought courses." />
+  <meta name="github-repo" content="EIS1600/handbook" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="UHH AAI WiSe 22/23, 57-525 Online S: Digital Humanities — GIS with R | Digital Islamicate Studies Handbook" />
+  
+  <meta name="twitter:description" content="This is a Handbook for Digital Islamicate Studies. Work in progress, based on tought courses." />
+  
+
+<meta name="author" content="Maxim G. Romanov" />
+
+
+<meta name="date" content="2022-10-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="touch-icon.png" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="prev" href="syllabi.html"/>
+<link rel="next" href="appendices.html"/>
+<script src="libs/header-attrs-2.17/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Digital Islamicate Studies Handbook</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#preface">Preface<span></span></a></li>
+<li class="chapter" data-level="1" data-path="introductory-matters.html"><a href="introductory-matters.html"><i class="fa fa-check"></i><b>1</b> Introductory Matters<span></span></a></li>
+<li class="chapter" data-level="2" data-path="general-tools-and-techniques.html"><a href="general-tools-and-techniques.html"><i class="fa fa-check"></i><b>2</b> General Tools and Techniques<span></span></a></li>
+<li class="chapter" data-level="3" data-path="ItoR_00.html"><a href="ItoR_00.html"><i class="fa fa-check"></i><b>3</b> Introduction to R<span></span></a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="r-installation.html"><a href="r-installation.html"><i class="fa fa-check"></i><b>3.1</b> R Installation<span></span></a></li>
+<li class="chapter" data-level="3.2" data-path="using-projects.html"><a href="using-projects.html"><i class="fa fa-check"></i><b>3.2</b> Using “Projects”<span></span></a></li>
+<li class="chapter" data-level="3.3" data-path="general-introduction.html"><a href="general-introduction.html"><i class="fa fa-check"></i><b>3.3</b> General Introduction<span></span></a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="general-introduction.html"><a href="general-introduction.html#ItoR_goals"><i class="fa fa-check"></i><b>3.3.1</b> Goals<span></span></a></li>
+<li class="chapter" data-level="3.3.2" data-path="general-introduction.html"><a href="general-introduction.html#ItoR_class"><i class="fa fa-check"></i><b>3.3.2</b> Class<span></span></a></li>
+<li class="chapter" data-level="3.3.3" data-path="general-introduction.html"><a href="general-introduction.html#starting-with-our-first-workbook"><i class="fa fa-check"></i><b>3.3.3</b> Starting with our first workbook:<span></span></a></li>
+<li class="chapter" data-level="3.3.4" data-path="general-introduction.html"><a href="general-introduction.html#ItoR_topics"><i class="fa fa-check"></i><b>3.3.4</b> Topics covered<span></span></a></li>
+<li class="chapter" data-level="3.3.5" data-path="general-introduction.html"><a href="general-introduction.html#ItoR_RM"><i class="fa fa-check"></i><b>3.3.5</b> Reference materials<span></span></a></li>
+<li class="chapter" data-level="3.3.6" data-path="general-introduction.html"><a href="general-introduction.html#ItoR_HW"><i class="fa fa-check"></i><b>3.3.6</b> Homework<span></span></a></li>
+<li class="chapter" data-level="3.3.7" data-path="general-introduction.html"><a href="general-introduction.html#ItoR_commonIssues"><i class="fa fa-check"></i><b>3.3.7</b> Common issues with homework<span></span></a></li>
+<li class="chapter" data-level="3.3.8" data-path="general-introduction.html"><a href="general-introduction.html#ItoR_SHW"><i class="fa fa-check"></i><b>3.3.8</b> Submitting homework<span></span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="introduction-to-python.html"><a href="introduction-to-python.html"><i class="fa fa-check"></i><b>4</b> Introduction to Python<span></span></a></li>
+<li class="chapter" data-level="5" data-path="thinking-about-data.html"><a href="thinking-about-data.html"><i class="fa fa-check"></i><b>5</b> Thinking About Data<span></span></a></li>
+<li class="chapter" data-level="6" data-path="research-methods-in-r.html"><a href="research-methods-in-r.html"><i class="fa fa-check"></i><b>6</b> Research Methods in R<span></span></a></li>
+<li class="chapter" data-level="7" data-path="research-methods-in-python.html"><a href="research-methods-in-python.html"><i class="fa fa-check"></i><b>7</b> Research Methods in Python<span></span></a></li>
+<li><a href="syllabi.html#syllabi">Syllabi<span></span></a>
+<ul>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r">UHH AAI WiSe 22/23, 57-525 Online S: Digital Humanities — GIS with R<span></span></a>
+<ul>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#course-details">Course Details<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#aims-contents-and-method-of-the-course">Aims, Contents and Method of the Course<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#course-evaluation">Course Evaluation<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#class-participation">Class Participation<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#homework">Homework<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#final-project">Final Project<span></span></a></li>
+<li class="chapter" data-level="7.0.1" data-path="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html"><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html"><i class="fa fa-check"></i><b>7.0.1</b> Practice Worksheets (R Notebooks)<span></span></a></li>
+<li class="chapter" data-level="7.0.2" data-path="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html"><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#study-materials"><i class="fa fa-check"></i><b>7.0.2</b> Study Materials<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#additional-study-materials">Additional Study Materials<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#software-tools-technologies">Software, Tools, &amp; Technologies:<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#submitting-homework">Submitting Homework:<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#schedule">Schedule<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#lesson-topics-subject-to-modifications">Lesson Topics (<em>subject to modifications</em>)<span></span></a></li>
+</ul></li>
+</ul></li>
+<li><a href="appendices.html#appendices">Appendices<span></span></a></li>
+<li><a href="references.html#references">References<span></span></a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Digital Islamicate Studies Handbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r" class="section level2 unnumbered hasAnchor">
+<h2>UHH AAI WiSe 22/23, 57-525 Online S: Digital Humanities — GIS with R<a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="course-details" class="section level3 unnumbered hasAnchor">
+<h3>Course Details<a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#course-details" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Course: 57-525 ONLINE S: Digital Humanities in African and Asian Studies: Geospatial Analysis with R (WiSe 22/23)</li>
+<li>Language of instruction: English</li>
+<li>Meeting time: Fr 14:00-16:00</li>
+<li>Additional meeting time: <em>we will need to find a time slot when you can all join and work on your HW assignments together</em></li>
+<li>Meeting place: for convenience, all meetings will be held online via Zoom</li>
+<li>Meeting link: <em>shared via Slack</em>; other details are available via STiNE</li>
+<li>Office hours: Fr 16:00-17:00 (on Zoom); if you have any questions, please, post them on Slack</li>
+<li>Instructor: Dr. Maxim Romanov, <a href="maxim.romanov@uni-hamburg.de">maxim.romanov@uni-hamburg.de</a></li>
+</ul>
+</div>
+<div id="aims-contents-and-method-of-the-course" class="section level3 unnumbered hasAnchor">
+<h3>Aims, Contents and Method of the Course<a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#aims-contents-and-method-of-the-course" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The course will offer a practical introduction into R programming language, which is currently one of the most popular choices of humanists interested in investigating humanities problems with computational methods. The focus of the course is on geospatial analysis. The course will have three main parts: first, you will be introduced to the basics of R; second, you will learn about main geospatial methods; third, you will work on your own research project. The language of the course is English.</p>
+<p>Just to give you an idea, these are some examples of visualizations that result from the application of analytic methods, which will be covered in the course.</p>
+<p><em>Periods of Prosperity of Islamic Cities</em></p>
+<p><img src="images/rgis_examples/c_MAKKA_398E213N_S_TI_0_700.png" />
+<img src="images/rgis_examples/c_BAGHDAD_443E333N_S_TI_0_700.png" /></p>
+<p><img src="images/rgis_examples/c_DIMASHQ_363E335N_S_TI_0_700.png" /></p>
+<p><strong>Interregional Connections, Islamic world (600-1300 CE)</strong></p>
+<p><img src="images/rgis_examples/TI_InterregionalConns_700Y_100Y_000_100.png" />
+<img src="images/rgis_examples/TI_InterregionalConns_700Y_100Y_500_600.png" /></p>
+<p><strong>Networks of Islamic Cities</strong></p>
+<p><img src="images/rgis_examples/TI_UrbanClusters_700Y_louvain_100_200.png" />
+<img src="images/rgis_examples/TI_UrbanClusters_700Y_louvain_400_500.png" /></p>
+<p><strong>Finding Routes Between Cities</strong></p>
+<p><img src="images/rgis_examples/short_route1.png" />
+<img src="images/rgis_examples/short_route3.png" /></p>
+<p><strong>Animated Map of the Growth of the US Cities</strong></p>
+<p><img src="images/rgis_examples/usMap_Animated.gif" /></p>
+<p>Personal computers are required both for in-class work and for your homework. Your computer must run a full version of either Windows, MacOS, or Linux; unfortunately, neither tablets nor Chrome-based laptops are suitable for this course. No prior programming experience is required, but familiarity with the command line and basic principles of programming will be beneficial.</p>
+</div>
+<div id="course-evaluation" class="section level3 unnumbered hasAnchor">
+<h3>Course Evaluation<a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#course-evaluation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Course evaluation will be a combination of:</p>
+<ul>
+<li>in-class participation (30%),</li>
+<li>weekly homework workbooks (25%),</li>
+<li>DataCamp courses (25%),</li>
+<li>and the final project (20%).</li>
+</ul>
+<p>Final projects can be prepared either individually or in groups.</p>
+<div id="datacamp" class="section level4 unnumbered hasAnchor">
+<h4>DataCamp<a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#datacamp" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>This class is supported by <a href="https://www.datacamp.com/">DataCamp</a>, the most intuitive learning platform for data science and analytics. Learn any time, anywhere and become an expert in R, Python, SQL, and more. DataCamp’s learn-by-doing methodology combines short expert videos and hands-on-the-keyboard exercises to help learners retain knowledge. DataCamp offers 350+ courses by expert instructors on topics such as importing data, data visualization, and machine learning. They’re constantly expanding their curriculum to keep up with the latest technology trends and to provide the best learning experience for all skill levels. Join over 6 million learners around the world and close your skills gap.</p>
+<p>You should all get access to <a href="https://www.datacamp.com/">DataCamp</a> for the duration of the semester. If you cannot access it, please, contact me as soon as possible.</p>
+<div class="figure">
+<img src="images/DataCamp_For_The_Classroom_2_lobb1p.jpeg" alt="" />
+<p class="caption">DataCamp</p>
+</div>
+</div>
+</div>
+<div id="class-participation" class="section level3 unnumbered hasAnchor">
+<h3>Class Participation<a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#class-participation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Each class session will consist in large part of practical hands-on exercises led by the instructor. BRING YOUR LAPTOP! We will accommodate whatever operating system you use (Windows, Mac, Linux), but it should be a laptop rather than a tablet. Don’t forget that asking for help counts as participation!</p>
+</div>
+<div id="homework" class="section level3 unnumbered hasAnchor">
+<h3>Homework<a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#homework" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Just as in research and real life, collaboration is a very good way to learn and is therefore encouraged. If you need help with any assignment, you are welcome to ask a fellow student. If you do work together on homework assignments, then when you submit it please include a brief note (just a sentence or two) to indicate who did what.</p>
+<p><strong>NB:</strong> On submitting homework, see below.</p>
+</div>
+<div id="final-project" class="section level3 unnumbered hasAnchor">
+<h3>Final Project<a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#final-project" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Final project will be discussed later. You will have an option to build on what we will be doing in class, but you are most encouraged to pick a topic of your own. The best option will be to work on something relevant to your field of study, your term paper or your thesis.</p>
+</div>
+<div id="practice-worksheets-r-notebooks" class="section level3 hasAnchor" number="7.0.1">
+<h3><span class="header-section-number">7.0.1</span> Practice Worksheets (R Notebooks)<a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#practice-worksheets-r-notebooks" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Updated Workbooks()</strong></p>
+<ul>
+<li><a href="./files/ws_new/00_worksheets_basics_of_rmarkdown.zip">00_worksheets_basics_of_rmarkdown.zip</a></li>
+<li><a href="./files/ws_new/01_worksheets_familiar-with-r_NEW.zip">01_worksheets_familiar-with-r_NEW.zip</a></li>
+<li><em>more will be added soon</em></li>
+</ul>
+<!--
+**Old Workbooks ()**
+
+- [01_worksheets_familiar-with-r.Rmd.zip](./files/ws_old/01_worksheets_familiar-with-r.Rmd.zip)
+- [02_worksheets_data-structures.Rmd.zip](./files/ws_old/02_worksheets_data-structures.Rmd.zip)
+- [03_worksheets_data-manipulation-introduction.Rmd.zip](./files/ws_old/03_worksheets_data-manipulation-introduction.Rmd.zip)
+- [04_worksheets_data-manipulation-continued.Rmd.zip](./files/ws_old/04_worksheets_data-manipulation-continued.Rmd.zip)
+- [05_worksheets_ggplot2-introduction-MGR-mod.Rmd.zip](./files/ws_old/05_worksheets_ggplot2-introduction-MGR-mod.Rmd.zip)
+- [06_worksheets_functions.Rmd.zip](./files/ws_old/06_worksheets_functions.Rmd.zip)
+-->
+<p><em>NB</em>: Worksheets 1-6 (<em>old workbooks</em>) have been developed by Lincoln Mullen. Source: Lincoln A. Mullen, <em>Computational Historical Thinking: With Applications in R (2018–)</em>: <a href="http://dh-r.lincolnmullen.com" class="uri">http://dh-r.lincolnmullen.com</a>.</p>
+</div>
+<div id="study-materials" class="section level3 hasAnchor" number="7.0.2">
+<h3><span class="header-section-number">7.0.2</span> Study Materials<a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#study-materials" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>all study materials will be provided via the Handbook (<a href="https://eis1600.github.io/handbook/" class="uri">https://eis1600.github.io/handbook/</a>).</li>
+</ul>
+</div>
+<div id="additional-study-materials" class="section level3 unnumbered hasAnchor">
+<h3>Additional Study Materials<a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#additional-study-materials" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Arnold, Taylor, and Lauren Tilton. <em>Humanities Data in R</em>. New York, NY: Springer Science+Business Media, 2015 (shared via Slack)</li>
+<li>Healy, Kieran. <em>Data Visualization: A Practical Guide.</em> Princeton University Press, 2018. ISBN: 978-0691181622. <a href="http://socviz.co/" class="uri">http://socviz.co/</a></li>
+<li>Hadley Wickham &amp; Garrett Grolemund, <em>R for Data Science: Import, Tidy, Transform, Visualize, and Model Data.</em> O’Reilly, 2017. ISBN: 978-1491910399. <a href="https://r4ds.had.co.nz/" class="uri">https://r4ds.had.co.nz/</a></li>
+<li>Wickham, Hadley. <em>Advanced R</em>, Second Edition. 2 edition. Boca Raton: Chapman and Hall/CRC, 2019. <a href="http://adv-r.had.co.nz/" class="uri">http://adv-r.had.co.nz/</a></li>
+<li>Also check <a href="https://bookdown.org/" class="uri">https://bookdown.org/</a> for more books on R</li>
+<li><em>Coding Club R Tutorials</em> (focus on Ecology and Environmental Sciences), <a href="https://ourcodingclub.github.io/tutorials.html" class="uri">https://ourcodingclub.github.io/tutorials.html</a></li>
+</ul>
+<p><em>NB:</em> By the way, this website is also built with R. Check: Yihui Xie. <em>bookdown: Authoring Books and Technical Documents with R Markdown</em>, 2022 <a href="https://bookdown.org/yihui/bookdown/" class="uri">https://bookdown.org/yihui/bookdown/</a></p>
+</div>
+<div id="software-tools-technologies" class="section level3 unnumbered hasAnchor">
+<h3>Software, Tools, &amp; Technologies:<a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#software-tools-technologies" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The following is the list of software, applications and packages that we will be using in the course. Make sure to have them installed by the class when we are supposed to use them.</p>
+<p>The main tools for the course will be the programming language <code>R</code> and <code>RStudio</code>, the premier integrated development environment for <code>R</code>.</p>
+<ul>
+<li><code>R</code>: <a href="https://cloud.r-project.org/" class="uri">https://cloud.r-project.org/</a> (choose the version for your operating system!)</li>
+<li><code>RStudio</code>: <a href="https://rstudio.com/products/rstudio/download/" class="uri">https://rstudio.com/products/rstudio/download/</a> (RStudio Desktop, Open Source License — the free version)</li>
+</ul>
+<p>We will also use a variety of packages for <code>R</code>, which we will be installing when necessary.</p>
+</div>
+<div id="submitting-homework" class="section level3 unnumbered hasAnchor">
+<h3>Submitting Homework:<a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#submitting-homework" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="handouts-workbooks" class="section level4 unnumbered hasAnchor">
+<h4>Handouts / Workbooks<a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#handouts-workbooks" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Homework assignments are to be submitted by the beginning of the next class;</li>
+<li>For the first few classes you must email them to the instructor (as attachments)</li>
+<li>Later, you will be publishing your homework assignments on your github pages and sending an email to the instructor informing that you have completed your homework and providing a relevant github link.
+<ul>
+<li>In the subject of your email, please, use the following format: <code>CourseID-LessonID-HW-Lastname-matriculationNumber</code>, for example, if I were to submit homework for the first lesson, my subject header would look like: <code>57525-L01-HW-Romanov-12435687</code>.</li>
+</ul></li>
+<li>DH is a collaborative field, so you are most welcome to work on your homework assignments in groups, however, you must still submit it. That is, if a groups of three works on one assignment, there must be three separate submissions: either emailed from each member’s email and published at each member’s github page.</li>
+</ul>
+</div>
+<div id="datacamp-assignments" class="section level4 unnumbered hasAnchor">
+<h4>DataCamp Assignments<a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#datacamp-assignments" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>you are also assigned six four-hour interactive courses on different aspects of R on the educational platform DataCamp (&lt;www.datacamp.com&gt;); i.e., approximately one 4-hour course every two weeks.</li>
+<li>there are deadlines for each course, which are arranged in terms of your general progress (from introductory to intermediate).</li>
+<li>while you are enrolled in this course, you can also use any other courses on the DataCamp platform free of charge. I strongly recommend you to take advantage of this opportunity.</li>
+</ul>
+</div>
+</div>
+<div id="schedule" class="section level3 unnumbered hasAnchor">
+<h3>Schedule<a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#schedule" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Location</strong>: Online</p>
+<ul>
+<li>01 Fri, 21. Oct. 2022 14:00-16:00</li>
+<li>02 Fri, 28. Oct. 2022 14:00-16:00</li>
+<li>03 Fri, 04. Nov. 2022 14:00-16:00</li>
+<li>04 Fri, 11. Nov. 2022 14:00-16:00</li>
+<li>05 Fri, 18. Nov. 2022 14:00-16:00</li>
+<li>06 Fri, 25. Nov. 2022 14:00-16:00</li>
+<li>07 Fri, 02. Dec. 2022 14:00-16:00</li>
+<li>08 Fri, 09. Dec. 2022 14:00-16:00</li>
+<li>09 Fri, 16. Dec. 2022 14:00-16:00</li>
+<li>10 Fri, 23. Dec. 2022 14:00-16:00</li>
+<li>11 Fri, 13. Jan. 2023 14:00-16:00</li>
+<li>12 Fri, 20. Jan. 2023 14:00-16:00</li>
+<li>13 Fri, 27. Jan. 2023 14:00-16:00</li>
+<li>14 Fri, 03. Feb. 2023 14:00-16:00</li>
+</ul>
+</div>
+<div id="lesson-topics-subject-to-modifications" class="section level3 unnumbered hasAnchor">
+<h3>Lesson Topics (<em>subject to modifications</em>)<a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#lesson-topics-subject-to-modifications" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>[ <code>#01</code> ]</strong> General Introduction: Making Sure Everything Works; Getting to know R</li>
+<li><strong>[ <code>#02</code> ]</strong> Basics I: Data Structures and Subsetting</li>
+<li><strong>[ <code>#03</code> ]</strong> Basics II: Data Manipulation &amp; Exloratory Analysis</li>
+<li><strong>[ <code>#04</code> ]</strong> Basics III: Data Visualization; Functions</li>
+<li><strong>[ <code>#05</code> ]</strong> Data I: Collecting, Organizing, Creating</li>
+<li><strong>[ <code>#06</code> ]</strong> Data II: Modeling &amp; Manipulating</li>
+<li><strong>[ <code>#07</code> ]</strong> Geospatial Analysis Methods I: Georeferencing and Geocoding</li>
+<li><strong>[ <code>#08</code> ]</strong> Geospatial Analysis Methods II: Creating Base Maps</li>
+<li><strong>[ <code>#09</code> ]</strong> Geospatial Analysis Methods III: Mapping Categorical and Continuous Data</li>
+<li><strong>[ <code>#10</code> ]</strong> Geospatial Analysis Methods IV: Mapping Networks</li>
+<li><strong>[ <code>#11</code> ]</strong> Geospatial Analysis Methods V: Interactive Maps</li>
+<li><strong>[ <code>#12</code> ]</strong> Projects I</li>
+<li><strong>[ <code>#13</code> ]</strong> Projects II</li>
+<li><strong>[ <code>#14</code> ]</strong> Projects III</li>
+</ul>
+
+</div>
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="syllabi.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="appendices.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "github"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/EIS1600/course_TM_R_2022S/edit/main/997-syllabi.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/EIS1600/course_TM_R_2022S/blob/main/997-syllabi.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+},
+"info": true
+});
+});
+</script>
+
+</body>
+
+</html>

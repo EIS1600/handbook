@@ -1,4 +1,5 @@
 bookdown::gitbook:
+  split_by: section
   highlight: pygments
   css: style.css
   config:
