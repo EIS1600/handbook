@@ -1,6 +1,8 @@
 introductory-matters
 general-tools-and-techniques
 ItoR_00
+r-installation
+using-projects
 general-introduction
 ItoR_goals
 ItoR_class
