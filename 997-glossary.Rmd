@@ -1,0 +1,30 @@
+`r if (knitr::is_html_output()) '
+# Glossary of Computer Terms{-}
+'`
+
+**NB:** The idea is to create a detailed glossary in multiple languages to facilitate understanding. Languages: English, German, Arabic, Persian, Turkish, etc. Entries may be supplied by illustration for more efficiency and clarity.
+
+## General Computer Terms
+
+- file manager
+- command line
+- path
+- folder
+- file
+
+## NLP and Linguistics
+
+- natural language processing
+- ngram
+- token
+- corpus linguistics
+- computational linguistics
+
+## Machine Learning
+
+- machine learning
+- deep learning
+- optical character recognition (OCR)
+- handwritten tet recognition (HTR)
+- training a model
+- artificial intelligence

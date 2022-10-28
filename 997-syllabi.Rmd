@@ -82,12 +82,13 @@ Just as in research and real life, collaboration is a very good way to learn and
 
 Final project will be discussed later. You will have an option to build on what we will be doing in class, but you are most encouraged to pick a topic of your own. The best option will be to work on something relevant to your field of study, your term paper or your thesis.
 
-### Practice Worksheets (R Notebooks)
+### Practice Worksheets (R Notebooks){-}
 
 **Updated Workbooks()**
 
 - [00_worksheets_basics_of_rmarkdown.zip](./files/ws_new/00_worksheets_basics_of_rmarkdown.zip)
 - [01_worksheets_familiar-with-r_NEW.zip](./files/ws_new/01_worksheets_familiar-with-r_NEW.zip)
+- [02_worksheets_data-structures_NEW.zip](./files/ws_new/02_worksheets_data-structures_NEW.zip)
 - *more will be added soon*
 
 
@@ -104,7 +105,7 @@ Final project will be discussed later. You will have an option to build on what 
 
 *NB*: Worksheets 1-6 (*old workbooks*) have been developed by Lincoln Mullen. Source: Lincoln A. Mullen, *Computational Historical Thinking: With Applications in R (2018–)*: <http://dh-r.lincolnmullen.com>.
 
-### Study Materials
+### Study Materials{-}
 
 - all study materials will be provided via the Handbook (<https://eis1600.github.io/handbook/>).
 

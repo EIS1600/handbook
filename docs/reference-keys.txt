@@ -20,5 +20,6 @@ introduction-to-python
 thinking-about-data
 research-methods-in-r
 research-methods-in-python
-practice-worksheets-r-notebooks
-study-materials
+general-computer-terms
+nlp-and-linguistics
+machine-learning

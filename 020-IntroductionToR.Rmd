@@ -14,7 +14,8 @@ This chapter offers a general introduction to R.
 * Install R and R Studio and start working with them
 	* R <https://www.r-project.org/> 
 	* R Studio <https://www.rstudio.com/>
-* Get to know R Notebooks (R markdown)
+* If you prefer video instructions, you can try [“How to download and install R and RStudio
+”](https://www.youtube.com/watch?v=TFGYlKvQEQ4) on YouTube.
 
 Possible Issues:
 
@@ -28,19 +29,18 @@ Possible Issues:
 
 Projects are a very convenient feature of RStudio. The idea is very simple---Rstudio ties all settings to a specific folder, which makes it much easier to work with files kept in the same folder. How to use projects?
 
-- create a folder somewhere on your computer; let’s call that folder “My_First_R_Project”, for further reference.
-- move files that you are going to work with into that folder;
-- open RStudio, then:
-  - File > New Project >
+1. create a folder somewhere on your computer; let’s call that folder “My_First_R_Project”, for further reference;
+2. move files that you are going to work with into that folder;
+3. open RStudio, then, in the main menu, choose: File > New Project (you should then see “New Project Wizard”, as shown below);
 ![](./images/r_instructions/new_project.png)
-  - Select “Existing Directory” > then click on “Browse”, and then select the folder “My_First_R_Project”, which you created in the first step; click “Create Project” to complete the process.
-- Now, what will happen is that in the tab “Files” in the lower right part of RStudio you will see the contents of the folder “My_First_R_Project”. There will also be a new file, called “My_First_R_Project.Rproj”.
+4. Select “Existing Directory” > then click on “Browse”, and then select the folder “My_First_R_Project”, which you created in the first step; click “Create Project” to complete the process.
+5. Now, what will happen is that in the tab “Files” in the lower right part of RStudio you will see the contents of the folder “My_First_R_Project”. There will also be a new file, called “My_First_R_Project.Rproj”.
   - Later on, you will be able to quickly open your project by double-clicking on that file.
   - When you open te project, R automatically sets the working directory (`setwd()`) to the folder of the project and many things just become much easier.
-- Now, you can add and create new files relevant to your project in the folder “My_First_R_Project” and they will be easy to find directly from RStudio, using its “Files” Tab, which is usually available in the lower right corner.
-  - you will benefit greatly from keeping some order in the project folder. For example, keep all you data files in a subfolder “data”; your images in a subfolder “images”, and so on.
+6. Now, you can add and create new files relevant to your project in the folder “My_First_R_Project” and they will be easy to find directly from RStudio, using its “Files” Tab, which is usually available in the lower right corner. **Suggestion:** you will benefit greatly from keeping some order in your project folder. For example, keep all you data files in a subfolder “data”; your images in a subfolder “images”, and so on.
 
 ## General Introduction
+
 
 ### Goals{#ItoR_goals}
 
