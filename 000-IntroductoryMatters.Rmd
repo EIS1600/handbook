@@ -5,3 +5,9 @@
 - general introduction into the concept and the goal of the handbook;
 - guidelines on how to use the handbook;
 - examples of syllabi that use the handbook;
+
+## R thoughts
+
+- general introductory lessons should be based on readings relevant R textbooks, rather than reinvented; these must be supplied with HW assignments implemented as R notebooks.
+  - Notebook 1: R markdown
+  - ...

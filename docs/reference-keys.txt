@@ -1,4 +1,5 @@
 introductory-matters
+r-thoughts
 general-tools-and-techniques
 ItoR_00
 r-installation

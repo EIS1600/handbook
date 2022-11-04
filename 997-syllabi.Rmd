@@ -84,15 +84,17 @@ Final project will be discussed later. You will have an option to build on what 
 
 ### Practice Worksheets (R Notebooks){-}
 
-**Updated Workbooks()**
-
 - [00_worksheets_basics_of_rmarkdown.zip](./files/ws_new/00_worksheets_basics_of_rmarkdown.zip)
 - [01_worksheets_familiar-with-r_NEW.zip](./files/ws_new/01_worksheets_familiar-with-r_NEW.zip)
 - [02_worksheets_data-structures_NEW.zip](./files/ws_new/02_worksheets_data-structures_NEW.zip)
-- *more will be added soon*
-
+- [03_worksheets_data-manipulation-introduction.Rmd.zip](./files/ws_old/03_worksheets_data-manipulation-introduction.Rmd.zip)
+- [04_worksheets_data-manipulation-continued.Rmd.zip](./files/ws_old/04_worksheets_data-manipulation-continued.Rmd.zip)
+- [05_worksheets_ggplot2-introduction-MGR-mod.Rmd.zip](./files/ws_old/05_worksheets_ggplot2-introduction-MGR-mod.Rmd.zip)
+- [06_worksheets_functions.Rmd.zip](./files/ws_old/06_worksheets_functions.Rmd.zip)
 
 <!--
+it does not seem to make sense to update these worksheets, instead an approach similar to Python (with a textbook), should be taken.
+
 **Old Workbooks ()**
 
 - [01_worksheets_familiar-with-r.Rmd.zip](./files/ws_old/01_worksheets_familiar-with-r.Rmd.zip)
