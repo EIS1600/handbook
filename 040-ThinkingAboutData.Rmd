@@ -8,3 +8,10 @@ This chapter introduces the main tools that one wants to be aware of and to be a
 2. Formatting Data
 3. Organizing Data
 4. Modeling Data
+
+
+## Collection of links
+
+- Using Tesseract with R (including an Arabic example), by Samer Hijjazi: <https://www.youtube.com/watch?v=dfhFpZ_vabI> [excellent tutorial, but missing the installation of Tesseract, which can be a bit annoying.]
+
+- Stylometry Lecture with Maciej Eder @ DH Lehrstuhl, Leipzig U: <https://www.youtube.com/watch?v=YS5rBio_bgs>
