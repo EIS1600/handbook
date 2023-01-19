@@ -237,9 +237,3 @@ Morris 2013 - The measure of civilization - Social Development Score - West.pdf
 * Finish the assignment started in class; email report (ideally, as a PDF, since now it will include graphs).
 * Find your own small data set published in a book or an article; digitize it using strategies discussed in class; run some analytical tasks (anything from what you have learned so far); create a report.
 * Email both reports.
-
-### Submitting homework{#SH041}
-
-* Homework assignment must be submitted by the beginning of the next class;
-* Email your homework to the instructor as attachments.
-	*  In the subject of your email, please, add the following: `070184-LXX-HW-YourLastName-YourMatriculationNumber`, where `LXX` is the numnber of the lesson for which you submit homework; `YourLastName` is your last name; and `YourMatriculationNumber` is your matriculation number.

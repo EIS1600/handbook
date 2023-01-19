@@ -1,0 +1,3 @@
+## Geospatial Analysis
+
+This chapter will cover major methods relevant to geospatial analysis, focusing on their implementation in R.

@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6.1 Geospatial Analysis | Digital Islamicate Studies Handbook</title>
+  <meta name="description" content="This is a Handbook for Digital Islamicate Studies. Work in progress, based on tought courses." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6.1 Geospatial Analysis | Digital Islamicate Studies Handbook" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://eis1600.github.io/handbook/" />
+  
+  <meta property="og:description" content="This is a Handbook for Digital Islamicate Studies. Work in progress, based on tought courses." />
+  <meta name="github-repo" content="EIS1600/handbook" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6.1 Geospatial Analysis | Digital Islamicate Studies Handbook" />
+  
+  <meta name="twitter:description" content="This is a Handbook for Digital Islamicate Studies. Work in progress, based on tought courses." />
+  
+
+<meta name="author" content="Maxim G. Romanov" />
+
+
+<meta name="date" content="2023-01-19" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="touch-icon.png" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="prev" href="research-methods-in-r.html"/>
+<link rel="next" href="research-methods-in-python.html"/>
+<script src="libs/header-attrs-2.17/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Digital Islamicate Studies Handbook</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#preface">Preface<span></span></a></li>
+<li class="chapter" data-level="1" data-path="introductory-matters.html"><a href="introductory-matters.html"><i class="fa fa-check"></i><b>1</b> Introductory Matters<span></span></a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="r-thoughts.html"><a href="r-thoughts.html"><i class="fa fa-check"></i><b>1.1</b> R thoughts<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="general-tools-and-techniques.html"><a href="general-tools-and-techniques.html"><i class="fa fa-check"></i><b>2</b> General Tools and Techniques<span></span></a></li>
+<li class="chapter" data-level="3" data-path="ItoR_00.html"><a href="ItoR_00.html"><i class="fa fa-check"></i><b>3</b> Introduction to R<span></span></a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="r-installation.html"><a href="r-installation.html"><i class="fa fa-check"></i><b>3.1</b> R Installation<span></span></a></li>
+<li class="chapter" data-level="3.2" data-path="using-projects.html"><a href="using-projects.html"><i class="fa fa-check"></i><b>3.2</b> Using “Projects”<span></span></a></li>
+<li class="chapter" data-level="3.3" data-path="general-introduction.html"><a href="general-introduction.html"><i class="fa fa-check"></i><b>3.3</b> General Introduction<span></span></a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="general-introduction.html"><a href="general-introduction.html#ItoR_goals"><i class="fa fa-check"></i><b>3.3.1</b> Goals<span></span></a></li>
+<li class="chapter" data-level="3.3.2" data-path="general-introduction.html"><a href="general-introduction.html#ItoR_class"><i class="fa fa-check"></i><b>3.3.2</b> Class<span></span></a></li>
+<li class="chapter" data-level="3.3.3" data-path="general-introduction.html"><a href="general-introduction.html#starting-with-our-first-workbook"><i class="fa fa-check"></i><b>3.3.3</b> Starting with our first workbook:<span></span></a></li>
+<li class="chapter" data-level="3.3.4" data-path="general-introduction.html"><a href="general-introduction.html#ItoR_topics"><i class="fa fa-check"></i><b>3.3.4</b> Topics covered<span></span></a></li>
+<li class="chapter" data-level="3.3.5" data-path="general-introduction.html"><a href="general-introduction.html#ItoR_RM"><i class="fa fa-check"></i><b>3.3.5</b> Reference materials<span></span></a></li>
+<li class="chapter" data-level="3.3.6" data-path="general-introduction.html"><a href="general-introduction.html#ItoR_HW"><i class="fa fa-check"></i><b>3.3.6</b> Homework<span></span></a></li>
+<li class="chapter" data-level="3.3.7" data-path="general-introduction.html"><a href="general-introduction.html#ItoR_commonIssues"><i class="fa fa-check"></i><b>3.3.7</b> Common issues with homework<span></span></a></li>
+<li class="chapter" data-level="3.3.8" data-path="general-introduction.html"><a href="general-introduction.html#ItoR_SHW"><i class="fa fa-check"></i><b>3.3.8</b> Submitting homework<span></span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="introduction-to-python.html"><a href="introduction-to-python.html"><i class="fa fa-check"></i><b>4</b> Introduction to Python<span></span></a></li>
+<li class="chapter" data-level="5" data-path="thinking-about-data.html"><a href="thinking-about-data.html"><i class="fa fa-check"></i><b>5</b> Thinking About Data<span></span></a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="collection-of-links.html"><a href="collection-of-links.html"><i class="fa fa-check"></i><b>5.1</b> Collection of links<span></span></a></li>
+<li class="chapter" data-level="5.2" data-path="data-i---collecting-organizing-creating.html"><a href="data-i---collecting-organizing-creating.html"><i class="fa fa-check"></i><b>5.2</b> Data I - Collecting, Organizing, Creating<span></span></a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="data-i---collecting-organizing-creating.html"><a href="data-i---collecting-organizing-creating.html#G041"><i class="fa fa-check"></i><b>5.2.1</b> Goals<span></span></a></li>
+<li class="chapter" data-level="5.2.2" data-path="data-i---collecting-organizing-creating.html"><a href="data-i---collecting-organizing-creating.html#SOFT041"><i class="fa fa-check"></i><b>5.2.2</b> Software &amp; Other Required Materials<span></span></a></li>
+<li class="chapter" data-level="5.2.3" data-path="data-i---collecting-organizing-creating.html"><a href="data-i---collecting-organizing-creating.html#INCLASSI041"><i class="fa fa-check"></i><b>5.2.3</b> In Class I: <em>Theoretical and Conceptual</em><span></span></a></li>
+<li class="chapter" data-level="5.2.4" data-path="data-i---collecting-organizing-creating.html"><a href="data-i---collecting-organizing-creating.html#ways-of-obtaining-data"><i class="fa fa-check"></i><b>5.2.4</b> Ways of obtaining data<span></span></a></li>
+<li class="chapter" data-level="5.2.5" data-path="data-i---collecting-organizing-creating.html"><a href="data-i---collecting-organizing-creating.html#MainFormat041"><i class="fa fa-check"></i><b>5.2.5</b> Main format<span></span></a></li>
+<li class="chapter" data-level="5.2.6" data-path="data-i---collecting-organizing-creating.html"><a href="data-i---collecting-organizing-creating.html#basic-principles-of-organizing-data-tidy-data"><i class="fa fa-check"></i><b>5.2.6</b> Basic principles of organizing data: <em>Tidy Data</em><span></span></a></li>
+<li class="chapter" data-level="5.2.7" data-path="data-i---collecting-organizing-creating.html"><a href="data-i---collecting-organizing-creating.html#INCLASSII041"><i class="fa fa-check"></i><b>5.2.7</b> In Class II: <em>Practical</em><span></span></a></li>
+<li class="chapter" data-level="5.2.8" data-path="data-i---collecting-organizing-creating.html"><a href="data-i---collecting-organizing-creating.html#morris-dataset-the-east-vs.-the-west"><i class="fa fa-check"></i><b>5.2.8</b> Morris Dataset: <em>the East Vs. the West</em><span></span></a></li>
+<li class="chapter" data-level="5.2.9" data-path="data-i---collecting-organizing-creating.html"><a href="data-i---collecting-organizing-creating.html#viennese-districts"><i class="fa fa-check"></i><b>5.2.9</b> Viennese Districts<span></span></a></li>
+<li class="chapter" data-level="5.2.10" data-path="data-i---collecting-organizing-creating.html"><a href="data-i---collecting-organizing-creating.html#RM041"><i class="fa fa-check"></i><b>5.2.10</b> Reference Materials<span></span></a></li>
+<li class="chapter" data-level="5.2.11" data-path="data-i---collecting-organizing-creating.html"><a href="data-i---collecting-organizing-creating.html#ADD041"><i class="fa fa-check"></i><b>5.2.11</b> Additional<span></span></a></li>
+<li class="chapter" data-level="5.2.12" data-path="data-i---collecting-organizing-creating.html"><a href="data-i---collecting-organizing-creating.html#AR041"><i class="fa fa-check"></i><b>5.2.12</b> Additional Readings<span></span></a></li>
+<li class="chapter" data-level="5.2.13" data-path="data-i---collecting-organizing-creating.html"><a href="data-i---collecting-organizing-creating.html#HW041"><i class="fa fa-check"></i><b>5.2.13</b> Homework<span></span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="research-methods-in-r.html"><a href="research-methods-in-r.html"><i class="fa fa-check"></i><b>6</b> Research Methods in R<span></span></a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="geospatial-analysis.html"><a href="geospatial-analysis.html"><i class="fa fa-check"></i><b>6.1</b> Geospatial Analysis<span></span></a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="geospatial-analysis.html"><a href="geospatial-analysis.html#georeferencing-geocoding"><i class="fa fa-check"></i><b>6.1.1</b> Georeferencing &amp; Geocoding<span></span></a></li>
+<li class="chapter" data-level="6.1.2" data-path="geospatial-analysis.html"><a href="geospatial-analysis.html#georeferencing"><i class="fa fa-check"></i><b>6.1.2</b> Georeferencing<span></span></a></li>
+<li class="chapter" data-level="6.1.3" data-path="geospatial-analysis.html"><a href="geospatial-analysis.html#georeferencing-maps-without-a-grid"><i class="fa fa-check"></i><b>6.1.3</b> Georeferencing maps without a grid<span></span></a></li>
+<li class="chapter" data-level="6.1.4" data-path="geospatial-analysis.html"><a href="geospatial-analysis.html#geocoding"><i class="fa fa-check"></i><b>6.1.4</b> Geocoding<span></span></a></li>
+<li class="chapter" data-level="6.1.5" data-path="geospatial-analysis.html"><a href="geospatial-analysis.html#reverse-geocoding"><i class="fa fa-check"></i><b>6.1.5</b> Reverse Geocoding<span></span></a></li>
+<li class="chapter" data-level="6.1.6" data-path="geospatial-analysis.html"><a href="geospatial-analysis.html#HW052a"><i class="fa fa-check"></i><b>6.1.6</b> Homework<span></span></a></li>
+<li class="chapter" data-level="6.1.7" data-path="geospatial-analysis.html"><a href="geospatial-analysis.html#SH052a"><i class="fa fa-check"></i><b>6.1.7</b> Submitting homework<span></span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="research-methods-in-python.html"><a href="research-methods-in-python.html"><i class="fa fa-check"></i><b>7</b> Research Methods in Python<span></span></a></li>
+<li><a href="glossary-of-computer-terms.html#glossary-of-computer-terms">Glossary of Computer Terms<span></span></a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="general-computer-terms.html"><a href="general-computer-terms.html"><i class="fa fa-check"></i><b>7.1</b> General Computer Terms<span></span></a></li>
+<li class="chapter" data-level="7.2" data-path="nlp-and-linguistics.html"><a href="nlp-and-linguistics.html"><i class="fa fa-check"></i><b>7.2</b> NLP and Linguistics<span></span></a></li>
+<li class="chapter" data-level="7.3" data-path="machine-learning.html"><a href="machine-learning.html"><i class="fa fa-check"></i><b>7.3</b> Machine Learning<span></span></a></li>
+</ul></li>
+<li><a href="syllabi.html#syllabi">Syllabi<span></span></a>
+<ul>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r">UHH AAI WiSe 22/23, 57-525 Online S: Digital Humanities — GIS with R<span></span></a>
+<ul>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#course-details">Course Details<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#aims-contents-and-method-of-the-course">Aims, Contents and Method of the Course<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#course-evaluation">Course Evaluation<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#class-participation">Class Participation<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#homework">Homework<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#final-project">Final Project<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#practice-worksheets-r-notebooks">Practice Worksheets (R Notebooks)<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#study-materials">Study Materials<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#additional-study-materials">Additional Study Materials<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#software-tools-technologies">Software, Tools, &amp; Technologies:<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#submitting-homework">Submitting Homework:<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#schedule">Schedule<span></span></a></li>
+<li><a href="uhh-aai-wise-2223-57-525-online-s-digital-humanities-gis-with-r.html#lesson-topics-subject-to-modifications">Lesson Topics (<em>subject to modifications</em>)<span></span></a></li>
+</ul></li>
+</ul></li>
+<li><a href="appendices.html#appendices">Appendices<span></span></a></li>
+<li><a href="references.html#references">References<span></span></a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Digital Islamicate Studies Handbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="geospatial-analysis" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Geospatial Analysis<a href="geospatial-analysis.html#geospatial-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This chapter will cover major methods relevant to geospatial analysis, focusing on their implementation in R.</p>
+
+<div id="georeferencing-geocoding" class="section level3 hasAnchor" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Georeferencing &amp; Geocoding<a href="geospatial-analysis.html#georeferencing-geocoding" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="TAG07" class="section level4 hasAnchor" number="6.1.1.1">
+<h4><span class="header-section-number">6.1.1.1</span> Goals<a href="geospatial-analysis.html#TAG07" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Learning about what georeferencing and geocoding are.
+Learning how to do georeferencing and geocoding.</p>
+</div>
+<div id="SOFT07" class="section level4 hasAnchor" number="6.1.1.2">
+<h4><span class="header-section-number">6.1.1.2</span> Software<a href="geospatial-analysis.html#SOFT07" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>QGIS, <a href="https://qgis.org/" class="uri">https://qgis.org/</a></li>
+<li>R</li>
+</ul>
+</div>
+<div id="additional-materials" class="section level4 hasAnchor" number="6.1.1.3">
+<h4><span class="header-section-number">6.1.1.3</span> Additional Materials<a href="geospatial-analysis.html#additional-materials" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>QGIS tutorials in <em>Mapping for Historians</em>: <a href="http://transnationalhistory.net/mapping/tutorials/" class="uri">http://transnationalhistory.net/mapping/tutorials/</a>
+<ul>
+<li>specifically on georeferencing: <a href="http://transnationalhistory.net/mapping/tutorials/georeferencing/" class="uri">http://transnationalhistory.net/mapping/tutorials/georeferencing/</a></li>
+</ul></li>
+<li>More general QGIS Tutorials: <a href="http://www.qgistutorials.com/en/index.html" class="uri">http://www.qgistutorials.com/en/index.html</a></li>
+<li>Additionally, see tutorials on <em>Programming Historian</em> in the section <code>mapping</code>: <a href="https://programminghistorian.org/en/lessons/?topic=mapping" class="uri">https://programminghistorian.org/en/lessons/?topic=mapping</a>
+<ul>
+<li>Clifford, Jim, Josh MacFadyen, and Daniel Macfarlane. 2013. “Installing QGIS 2.0 and Adding Layers.” Programming Historian, December. <a href="https://programminghistorian.org/lessons/qgis-layers" class="uri">https://programminghistorian.org/lessons/qgis-layers</a>.</li>
+<li>Clifford, Jim, Josh MacFadyen, and Daniel Macfarlane. 2013. “Georeferencing in QGIS 2.0.” Programming Historian, December. <a href="https://programminghistorian.org/lessons/georeferencing-qgis" class="uri">https://programminghistorian.org/lessons/georeferencing-qgis</a>.</li>
+</ul></li>
+</ul>
+<!-- ### Projection Issues -->
+<!-- ![](./files/QGIS/headGlobus.jpg) -->
+<!-- See, <https://en.wikipedia.org/wiki/List_of_map_projections>. -->
+<!-- ### A Digital Map: Layers of Goodness -->
+<!-- ![](./files/QGIS/maps_layers.jpg) -->
+<!-- * Layers: -->
+<!--    * Analytical Layer -->
+<!--    * Our Data -->
+<!--    * Annotation/Legend -->
+<!-- * Social Geography -->
+<!--    * Political Boundaries -->
+<!--    * Settlements, etc. -->
+<!-- * Physical Geography -->
+<!--    * Types of surface -->
+<!--    * Continents / Coastal Line -->
+<!--    * Elevation profile -->
+<!--    * Rivers, Lakes, etc. -->
+<!-- * Base Layer: Graticule -->
+<!-- ### Main Types of Data: Points, Lines, Polygons -->
+<!-- * Analytical Layer -->
+<!--    * Our Data -->
+<!--        * Points: -->
+<!--            * item, x**[1]**, point(lat, lon)**[2]** -->
+<!--        * Lines: -->
+<!--            * item, x**[1]**, from(lat, lon)**[2]**, to(lat, lon)**[2]** -->
+<!--        * Polygons: -->
+<!--            * item, x, area(lat, lon; lat, lon; … lat, lon)**[2]** -->
+<!--    * Annotation/Legend -->
+<!-- **[1]** where x is a categorical parameter; **[2]** lat/lon: decimal coordinates (not DMS) -->
+</div>
+</div>
+<div id="georeferencing" class="section level3 hasAnchor" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Georeferencing<a href="geospatial-analysis.html#georeferencing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Georeferencing can be defined as a process of associating digital images (pictures of a maps) with locations in physical space. What we do in this process is projecting an image of a map on geographical coordinate system. After this process of projection or association is complete, objects on georeferenced maps acquire geographical coordinates, which can be harvested for use in other projects.</p>
+<div id="qgis" class="section level4 hasAnchor" number="6.1.2.1">
+<h4><span class="header-section-number">6.1.2.1</span> QGIS<a href="geospatial-analysis.html#qgis" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>QGIS must be installed and running. <em>Note:</em> Interfaces might differ from system to system; the same applies to different versions of QGIS. Before we proceed, you may want to add Google Layers. To Add Google maps layer: (on the left pane, <em>Browser</em>) XYZ &gt; New connection &gt; paste one of the following links (Source: <a href="https://geogeek.xyz/how-to-add-google-maps-layers-in-qgis-3.html" class="uri">https://geogeek.xyz/how-to-add-google-maps-layers-in-qgis-3.html</a>):</p>
+<ol style="list-style-type: decimal">
+<li><strong>Google Maps</strong>: <a href="https://mt1.google.com/vt/lyrs=r&amp;x=%7Bx%7D&amp;y=%7By%7D&amp;z=%7Bz%7D" class="uri">https://mt1.google.com/vt/lyrs=r&amp;x={x}&amp;y={y}&amp;z={z}</a></li>
+<li><strong>Google Satellite</strong>: <a href="http://www.google.cn/maps/vt?lyrs=s@189&amp;gl=cn&amp;x=%7Bx%7D&amp;y=%7By%7D&amp;z=%7Bz%7D" class="uri">http://www.google.cn/maps/vt?lyrs=s@189&amp;gl=cn&amp;x={x}&amp;y={y}&amp;z={z}</a></li>
+<li><strong>Google Satellite Hybrid</strong>: <a href="https://mt1.google.com/vt/lyrs=y&amp;x=%7Bx%7D&amp;y=%7By%7D&amp;z=%7Bz%7D" class="uri">https://mt1.google.com/vt/lyrs=y&amp;x={x}&amp;y={y}&amp;z={z}</a></li>
+<li><strong>Google Terrain</strong>: <a href="https://mt1.google.com/vt/lyrs=t&amp;x=%7Bx%7D&amp;y=%7By%7D&amp;z=%7Bz%7D" class="uri">https://mt1.google.com/vt/lyrs=t&amp;x={x}&amp;y={y}&amp;z={z}</a></li>
+<li><strong>Google Roads</strong>: <a href="https://mt1.google.com/vt/lyrs=h&amp;x=%7Bx%7D&amp;y=%7By%7D&amp;z=%7Bz%7D" class="uri">https://mt1.google.com/vt/lyrs=h&amp;x={x}&amp;y={y}&amp;z={z}</a></li>
+</ol>
+<p><strong>NB:</strong> Images of maps to work with below</p>
+</div>
+<div id="step-by-step-instructions" class="section level4 hasAnchor" number="6.1.2.2">
+<h4><span class="header-section-number">6.1.2.2</span> Step-by-step instructions<a href="geospatial-analysis.html#step-by-step-instructions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="files/052_GIS/QGIS/OldDesignShop_MapCentralEurope_Small.jpg" /></p>
+<ul>
+<li>Let’s georeference this old map of Europe. Here is the link: <a href="./files/QGIS/OldDesignShop_MapCentralEurope.jpg"><em>OldDesignShop_MapCentralEurope.jpg</em></a>.</li>
+<li>In your <code>XYZ Tiles</code>, double click on any Google layer that you added (or on OpenStreetMap)
+<ul>
+<li>A layer should be added to the main map (see, Layer pane)</li>
+</ul></li>
+<li>Open Georeferencer: <code>Raster</code> &gt; <code>Georeferencer</code>
+<ul>
+<li>if you do not see it there, it must be activated first:
+<ul>
+<li><code>Plugins</code> &gt; <code>Manage and Install Plugins...</code> &gt; [search for <em>georeferencer</em>], then tick a box against <strong>Georeferencer GDAL</strong></li>
+</ul></li>
+</ul></li>
+<li>In Georeferencer: <code>File</code> &gt; <code>Open Raster</code> (also the first button on the main panel)
+<ul>
+<li>Choose a file. Lets start with <a href="./files/QGIS/OldDesignShop_MapCentralEurope.jpg"><em>OldDesignShop_MapCentralEurope.jpg</em></a> (this one has a grid, so it will be easier to process)</li>
+<li>In <em>Coordinate Reference System Selector</em>, choose <strong>WGS 84 / Pseudo-Mercator</strong>, then clock <code>OK</code></li>
+</ul></li>
+<li>Open <code>Settings</code> &gt; <code>Transformation settings</code> (or click the yellow gears button)
+<ul>
+<li>Choose settings like on the screenshot below (you can also change <code>Compression</code> setting, which will generate a smaller map-image):
+<ul>
+<li><strong>Important!</strong> Make sure to select <code>EPSG:4326 - WGS 84</code> in <strong>Target SRS</strong>. (If your map is tiny and appears somewhere in the Atlantic ocean near the coast of West Africa, you have selected a wrong target <strong>S</strong>patial <strong>R</strong>eference <strong>S</strong>ystem!)
+<img src="files/052_GIS/QGIS/transfSettings.png" /></li>
+</ul></li>
+</ul></li>
+<li>Now, adding georeference points:
+<img src="files/052_GIS/QGIS/coordinates.png" />
+<ul>
+<li>If you have a grid, it is very easy: just type in coordinates</li>
+<li>If you don’t, it is tricky: you need to find the same features on the image and on the map (for this, click on <code>From Map Canvas</code>)</li>
+</ul></li>
+<li><strong>[!!!]</strong> Ideally, if you know projection of the map, you only need a few points; this almost never happens, so, the more points you create, the more precisely your image will be georeferenced. This is easy when you have a grid.</li>
+<li>When you are done with collecting points, click on <code>PLAY</code> button (green triangle)
+<ul>
+<li>The image of your georeferenced map should appear in the main window.</li>
+</ul></li>
+<li><strong>[!!!]</strong> Keep in mind that you add layers to your map and a layer on top may cover the layer below!</li>
+</ul>
+<p>Below you can see how a georeferences map would look, if only 4 points GCP (ground reference points) have been collected. In the areas circled with red you can see that the northern par of the UK and Denmark are not very well aligned.</p>
+<p><img src="files/052_GIS/QGIS/samples/001_small.jpg" /></p>
+<p>In the example below you the georeferences map has about a dozen GCP. Alignment of the northern part of the UK and Denmark is much better. In general, if you have a clear coordinate grid on your maps, you may want to georeference all intersections—this will give you the best possible results.</p>
+<p><img src="files/052_GIS/QGIS/samples/002_small.jpg" /></p>
+<p>In general, this procedure can be extremely helpful if:</p>
+<ul>
+<li>you need to collect geographical information from historical maps;</li>
+<li>you want to use some historical map as the base layer for mapping your data;</li>
+</ul>
+</div>
+</div>
+<div id="georeferencing-maps-without-a-grid" class="section level3 hasAnchor" number="6.1.3">
+<h3><span class="header-section-number">6.1.3</span> Georeferencing maps without a grid<a href="geospatial-analysis.html#georeferencing-maps-without-a-grid" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You may have a map that does not have any grid. In this case you will have to georeference your map by visual cues. The steps are the same as above, but instead of typing in the coordinates, you will need to identify the same visual features on the map that you georeference (your source map) and the base layer map loaded into QGIS (your target map).</p>
+<ul>
+<li>First, you click on the selected feature on your source map.</li>
+<li>Then, click on “From Map Canvas”</li>
+<li>Then, find the same feature on the target map and click there — the GCP will be automatically created.</li>
+</ul>
+<p><img src="files/052_GIS/QGIS/samples/008_small.jpg" /></p>
+<p>For for our practice we will use <a href="./files/QGIS/Wien_0890208.jpg">the following old map of Vienna</a> (Source: <a href="https://davidrumsey.georeferencer.com/maps/784dd2aa-30f6-5668-8e35-3878a385d14a/">David Ramsey Map Collection</a>)</p>
+<p><img src="files/052_GIS/QGIS/samples/005_small.jpg" /></p>
+<p>In my attempt, I just picked three points in the 1st district: Burgtor, Schottentor, and Domkirche St. Stephan. The results are not too bad, but if you look closer areas outside of the 1st district are not well aligned. In cases you need data from such a map, you will need to collect as many points as possible. For better transformation results, these points also should be distributed evenly across the surface of your source map and at the same time evenly distanced from each other — like a grid.</p>
+<p><img src="files/052_GIS/QGIS/samples/004_small.jpg" /></p>
+<div id="collecting-point-data-very-simple-way" class="section level4 hasAnchor" number="6.1.3.1">
+<h4><span class="header-section-number">6.1.3.1</span> Collecting Point Data (Very Simple Way)<a href="geospatial-analysis.html#collecting-point-data-very-simple-way" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Create a CSV file; copy/paste the content from below (six lines of text!)</li>
+</ul>
+<pre><code>city,state,lon,lat
+Warsaw,Russia,21.13066,52.23914
+Berlin,Germany,13.38309,52.54312
+Hamburg,Germany,9.98335,53.54092
+Vienna,Austria-Hungary,16.39089,48.27847
+Budapest,Austria-Hungary,19.05326,47.50452</code></pre>
+<ul>
+<li>In QGIS, load this file by:
+<ul>
+<li><code>Layer</code> &gt; <code>Add Layer</code> &gt; <code>Add Delimited Text Layer</code></li>
+<li>Settings should look like on the screenshor below
+<ul>
+<li>CSV (comma separated format)</li>
+<li>Point coodinates (X field: <code>lon</code>; Y field: <code>lat</code>)</li>
+<li>Geometry CRS: <code>EPSG:4326 - WGS 84 / Pseudo Mercator</code></li>
+<li>(you will have only two lines of data, instead of five)</li>
+<li>Make sure to click <code>Add</code> when you are done!</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><img src="files/052_GIS/QGIS/samples/006_Small.jpg" />
+* The layer is there, but we need to add labels to see the cities
+* Right-click on the layer &gt; Properties
+* On the tab <code>Labels</code> change the settings like on the screenshot below
+* Click <code>Apply</code>, then <code>OK</code>.
+<img src="files/052_GIS/QGIS/citiesLabels.png" />
+* You should see several cities on the map now:
+* If nothing appears, try: Right-click on the layer &gt; Set CRS &gt; Set Layer CRS: Choose <code>WGS 84 / Pseudo-Mercator</code>
+* Now, we can use <code>Coordinate Capture</code> plugin to collect data from our georeferenced map:
+* If activated, coordinarte capture should be visible in lower right corner
+* To activate coordinate capture: <code>Plugins</code> &gt; <code>Manage and Install Plugins...</code> &gt; [search for <em>coordinate capture</em>], then tick a box against <strong>Coordinate Capture</strong>
+* You might still need to do: <code>Vector</code> &gt; <code>Coordinate Capture</code> to make it appear.</p>
+<p><img src="files/052_GIS/QGIS/samples/007_Small.jpg" /></p>
+<ul>
+<li>Collecting coordinates:
+<ul>
+<li>Keep the initial CSV open in some editor;</li>
+<li>In <code>Coordinate Capture</code>, click <em>Start capture</em>;
+<ul>
+<li>Click on any point on the map &gt; coordinates of that location will appear in the plugin;</li>
+<li>Choose the top coordinates (see image above), click on an icon to the right of the coordinates to copy them;</li>
+</ul></li>
+<li>Go back to the open CSV:
+<ul>
+<li>Add a new line:
+<ul>
+<li>Type the name of the city;</li>
+<li>Add comma and type the name of the country (alternatively, just add another comma if you want to keep it empty);</li>
+<li>Now, paste what you copied into Clipboard (this will add a set of coordinates)</li>
+</ul></li>
+<li>Save the file</li>
+</ul></li>
+<li>Back in QGIS:
+<ul>
+<li>Newly-added city must appear on the map. (if not, try to switch the layer off and on.)</li>
+</ul></li>
+<li>Repeat, until all required data is collected.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="geocoding" class="section level3 hasAnchor" number="6.1.4">
+<h3><span class="header-section-number">6.1.4</span> Geocoding<a href="geospatial-analysis.html#geocoding" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Geocoding is a process through which we obtain coordinates of places for which we know only names. The code below takes information that we provide and sends a request to some geocoding service, which—if matches are found—returns results. Geocoding is a simple way to collect coordinates for locations that you have. As you will see in the code below, you will need the name of the place and the name of the country to get matches. Historians, however, should be very careful with this approach, since it works reliably only for the current modern data. (<em>Important</em>: you should always read documnetation for packages that you use in order to understand better what you can and cannot do with it.)</p>
+<p>We wil need the following libraries:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="geospatial-analysis.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb8-2"><a href="geospatial-analysis.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidygeocoder)</span></code></pre></div>
+<p>Now we need to build a simple table with some data. <code>tribble</code> function builds a tibble row by row. The first row is column names, then we can add values in lines that follow (splitting into lines is for visual readability).</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="geospatial-analysis.html#cb9-1" aria-hidden="true" tabindex="-1"></a>dynasties <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb9-2"><a href="geospatial-analysis.html#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>name, <span class="sc">~</span>city, <span class="sc">~</span>country, <span class="sc">~</span>dynasty,</span>
+<span id="cb9-3"><a href="geospatial-analysis.html#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;Dimašq&quot;</span>,<span class="st">&quot;Damascus&quot;</span>, <span class="st">&quot;Syria&quot;</span>, <span class="st">&quot;Umayyads&quot;</span>,</span>
+<span id="cb9-4"><a href="geospatial-analysis.html#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;Baġdād&quot;</span>, <span class="st">&quot;Baghdad&quot;</span>, <span class="st">&quot;Iraq&quot;</span>, <span class="st">&quot;Abbasids&quot;</span>,</span>
+<span id="cb9-5"><a href="geospatial-analysis.html#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;Naysābūr&quot;</span>, <span class="st">&quot;Nishapur&quot;</span>, <span class="st">&quot;Iran&quot;</span>, <span class="st">&quot;Tahirids&quot;</span>,</span>
+<span id="cb9-6"><a href="geospatial-analysis.html#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;Qurṭubaŧ&quot;</span>, <span class="st">&quot;Cordoba&quot;</span>, <span class="st">&quot;Spain&quot;</span>, <span class="st">&quot;Spanish Umayyads&quot;</span>,</span>
+<span id="cb9-7"><a href="geospatial-analysis.html#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;al-Qāhiraŧ&quot;</span>, <span class="st">&quot;Cairo&quot;</span>, <span class="st">&quot;Egypt&quot;</span>, <span class="st">&quot;Mamluks&quot;</span>,</span>
+<span id="cb9-8"><a href="geospatial-analysis.html#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;Buḫārá&quot;</span>, <span class="st">&quot;Bukhara&quot;</span>, <span class="st">&quot;Uzbekistan&quot;</span>, <span class="st">&quot;Samanids&quot;</span>)</span></code></pre></div>
+<p>Now, the following line calls the function <code>geocode</code> (from <code>tidygeocoder</code>) and tries to get all the relevant data from Open Street Maps (<code>osm</code>). You can check the page of the library for more detials: <a href="https://jessecambon.github.io/2020/07/15/tidygeocoder-1-0-0.html" class="uri">https://jessecambon.github.io/2020/07/15/tidygeocoder-1-0-0.html</a>.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="geospatial-analysis.html#cb10-1" aria-hidden="true" tabindex="-1"></a>dynasties_locations <span class="ot">&lt;-</span> dynasties <span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a href="geospatial-analysis.html#cb10-2" aria-hidden="true" tabindex="-1"></a>  tidygeocoder<span class="sc">::</span><span class="fu">geocode</span>(<span class="at">city =</span> city, <span class="at">country =</span> country, <span class="at">method =</span> <span class="st">&#39;osm&#39;</span>, </span>
+<span id="cb10-3"><a href="geospatial-analysis.html#cb10-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">full_results =</span> <span class="cn">TRUE</span>, <span class="at">custom_query=</span> <span class="fu">list</span>(<span class="at">extratags =</span> <span class="dv">1</span>))</span></code></pre></div>
+<pre><code>## Passing 6 addresses to the Nominatim single address geocoder</code></pre>
+<pre><code>## Query completed in: 6.1 seconds</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="geospatial-analysis.html#cb13-1" aria-hidden="true" tabindex="-1"></a>dynasties_locations</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 40
+##   name       city   country dynasty   lat  long place_id licence osm_type osm_id
+##   &lt;chr&gt;      &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;    &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;     &lt;int&gt;
+## 1 Dimašq     Damas… Syria   Umayya…  33.5 36.3    9.66e6 Data ©… node     1.09e9
+## 2 Baġdād     Baghd… Iraq    Abbasi…  33.3 44.4    3.09e8 Data ©… relation 5.64e6
+## 3 Naysābūr   Nisha… Iran    Tahiri…  36.2 58.8    3.09e8 Data ©… relation 9.52e6
+## 4 Qurṭubaŧ   Cordo… Spain   Spanis…  37.9 -4.78   3.08e8 Data ©… relation 3.43e5
+## 5 al-Qāhiraŧ Cairo  Egypt   Mamluks  30.0 31.2    3.08e8 Data ©… relation 5.47e6
+## 6 Buḫārá     Bukha… Uzbeki… Samani…  39.8 64.4    3.09e8 Data ©… relation 1.31e7
+## # … with 30 more variables: boundingbox &lt;list&gt;, display_name &lt;chr&gt;,
+## #   class &lt;chr&gt;, type &lt;chr&gt;, importance &lt;dbl&gt;, icon &lt;chr&gt;,
+## #   extratags.capital &lt;chr&gt;, extratags.wikidata &lt;chr&gt;,
+## #   extratags.wikipedia &lt;chr&gt;, extratags.population &lt;chr&gt;,
+## #   extratags.place &lt;chr&gt;, extratags.is_capital &lt;chr&gt;,
+## #   extratags.linked_place &lt;chr&gt;, `extratags.capital_ISO3166-1` &lt;chr&gt;,
+## #   extratags.website &lt;chr&gt;, extratags.ele &lt;chr&gt;, `extratags.ref:ine` &lt;chr&gt;, …</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="geospatial-analysis.html#cb15-1" aria-hidden="true" tabindex="-1"></a>dynasties_locations_filtered <span class="ot">&lt;-</span> dynasties_locations <span class="sc">%&gt;%</span></span>
+<span id="cb15-2"><a href="geospatial-analysis.html#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, city, country, lat, long)</span>
+<span id="cb15-3"><a href="geospatial-analysis.html#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="geospatial-analysis.html#cb15-4" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(dynasties_locations_filtered)</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">city</th>
+<th align="left">country</th>
+<th align="right">lat</th>
+<th align="right">long</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Dimašq</td>
+<td align="left">Damascus</td>
+<td align="left">Syria</td>
+<td align="right">33.51307</td>
+<td align="right">36.309581</td>
+</tr>
+<tr class="even">
+<td align="left">Baġdād</td>
+<td align="left">Baghdad</td>
+<td align="left">Iraq</td>
+<td align="right">33.30617</td>
+<td align="right">44.387221</td>
+</tr>
+<tr class="odd">
+<td align="left">Naysābūr</td>
+<td align="left">Nishapur</td>
+<td align="left">Iran</td>
+<td align="right">36.21059</td>
+<td align="right">58.792280</td>
+</tr>
+<tr class="even">
+<td align="left">Qurṭubaŧ</td>
+<td align="left">Cordoba</td>
+<td align="left">Spain</td>
+<td align="right">37.88458</td>
+<td align="right">-4.776014</td>
+</tr>
+<tr class="odd">
+<td align="left">al-Qāhiraŧ</td>
+<td align="left">Cairo</td>
+<td align="left">Egypt</td>
+<td align="right">30.04439</td>
+<td align="right">31.235726</td>
+</tr>
+<tr class="even">
+<td align="left">Buḫārá</td>
+<td align="left">Bukhara</td>
+<td align="left">Uzbekistan</td>
+<td align="right">39.76755</td>
+<td align="right">64.423133</td>
+</tr>
+</tbody>
+</table>
+<p>To check whether results are any go, we can use the following code to generate a very simple map. (We will get into details of how to build beautiful maps in the next lessons.)</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="geospatial-analysis.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb16-2"><a href="geospatial-analysis.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(maps)</span>
+<span id="cb16-3"><a href="geospatial-analysis.html#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span></code></pre></div>
+<p>Here is a sample code to build a very simple map:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="geospatial-analysis.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(dynasties_locations, <span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat)) <span class="sc">+</span></span>
+<span id="cb17-2"><a href="geospatial-analysis.html#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">borders</span>(<span class="st">&#39;world&#39;</span>) <span class="sc">+</span></span>
+<span id="cb17-3"><a href="geospatial-analysis.html#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_label_repel</span>(<span class="fu">aes</span>(<span class="at">label =</span> name), <span class="at">force =</span> <span class="dv">2</span>, <span class="at">segment.alpha =</span> <span class="dv">0</span>) <span class="sc">+</span> </span>
+<span id="cb17-4"><a href="geospatial-analysis.html#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">theme_void</span>()</span></code></pre></div>
+<p><img src="handbook_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
+<div id="reverse-geocoding" class="section level3 hasAnchor" number="6.1.5">
+<h3><span class="header-section-number">6.1.5</span> Reverse Geocoding<a href="geospatial-analysis.html#reverse-geocoding" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In reverse geocoding we start with coordinates and are trying to get more data on what is there at these cordinates. There is a library <code>revgeo</code> (<a href="https://github.com/mhudecheck/revgeo" class="uri">https://github.com/mhudecheck/revgeo</a>) that we can use for this purpose. This procedure may be convenient to check whether certain coordinates are within the borders of a specific country or not; this, however, again works only for the current, and not for historical data.</p>
+<p><strong>NB:</strong> there is a little glitch with the library, as it sends requests to an URL that is no longer in use. This can be fixed by using this <a href="./files/QGIS/revgeo.R.zip">script</a>. Dowload it, unzip it and add it to your code with the following line:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="geospatial-analysis.html#cb18-1" aria-hidden="true" tabindex="-1"></a>pathToRevGeo <span class="ot">&lt;-</span> <span class="st">&quot;path/to/the/script/on/your/computer/revgeo.R&quot;</span></span>
+<span id="cb18-2"><a href="geospatial-analysis.html#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(pathToRevGeo)</span></code></pre></div>
+<p>Now, we can try to get information about a place:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="geospatial-analysis.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">revgeo</span>(<span class="at">longitude=</span><span class="fl">16.3637029</span>, <span class="at">latitude=</span><span class="fl">48.2155248</span>, <span class="at">provider =</span> <span class="st">&#39;photon&#39;</span>, <span class="at">output=</span><span class="st">&#39;frame&#39;</span>)</span></code></pre></div>
+<pre><code>[1] &quot;Getting geocode data from Photon: https://photon.komoot.io/reverse?lon=16.3637029&amp;lat=48.2155248&quot;
+  housenumber                 street city           state  zip    country
+1          11 Maria-Theresien-Straße Wien State Not Found 1090 Österreich</code></pre>
+</div>
+<div id="HW052a" class="section level3 hasAnchor" number="6.1.6">
+<h3><span class="header-section-number">6.1.6</span> Homework<a href="geospatial-analysis.html#HW052a" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Finish georeferencing maps:
+<ul>
+<li>map of Europe (easy);</li>
+<li>map of Vienna (intermeddiate-hard);</li>
+<li>add these screenshots of your georeferenced maps to your homework notebook;</li>
+</ul></li>
+<li>Collect data on major cities in Austro-Hungary and add them to the map in QGIS; send me a screenshot of completed map;
+<ul>
+<li>print out the table in the notebook;</li>
+<li>include the screenshot in the notebook;</li>
+</ul></li>
+<li>Geocode 10-15 cities that you have visited in your life;
+<ul>
+<li>print out the table with those places;</li>
+<li>generate a simple map with them (use the map as a means to check whether georeferencing worked correctly);</li>
+</ul></li>
+</ol>
+<p>Submit your notebook.</p>
+</div>
+<div id="SH052a" class="section level3 hasAnchor" number="6.1.7">
+<h3><span class="header-section-number">6.1.7</span> Submitting homework<a href="geospatial-analysis.html#SH052a" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Homework assignment must be submitted by the beginning of the next class;</li>
+<li>Email your homework to the instructor as attachments.
+<ul>
+<li>In the subject of your email, please, add the following: <code>070184-LXX-HW-YourLastName-YourMatriculationNumber</code>, where <code>LXX</code> is the numnber of the lesson for which you submit homework; <code>YourLastName</code> is your last name; and <code>YourMatriculationNumber</code> is your matriculation number.</li>
+</ul></li>
+</ul>
+
+</div>
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="research-methods-in-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="research-methods-in-python.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "github"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/EIS1600/course_TM_R_2022S/edit/main/052-ResearchMethodsR_GIS.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/EIS1600/course_TM_R_2022S/blob/main/052-ResearchMethodsR_GIS.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+},
+"info": true
+});
+});
+</script>
+
+</body>
+
+</html>

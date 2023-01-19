@@ -1,0 +1,37 @@
+Author	Society for the Diffusion of Useful Knowledge (Great Britain)
+Date	1833
+Short Title	Vienna. Wien.
+Publisher	Chapman and Hall
+Publisher Location	London
+Type	Atlas Map
+Type	View
+Obj Height cm	34
+Obj Width cm	38
+Scale 1	16,000
+Note	Engraved map. Hand col. Includes drawings of 12 building facades.
+Reference	Branch, M.C. An atlas of rare city maps, p. 18-19.
+Country	Austria
+City	Vienna (Austria)
+Full Title	Vienna. Wien. Published under the superintendence of the Society for the Diffusion of Useful Knowledge. Drawn by W.B. Clarke, archt. Engraved & printed by J. Henshall. Published by Baldwin & Cradock, 47 Paternoster Row, 1833. (London: Chapman & Hall, 1844)
+List No	0890.208
+Page No	(211)
+Series No	217
+Engraver or Printer	Clarke, W. B.
+Engraver or Printer	Henshall, J.
+Publication Author	Society for the Diffusion of Useful Knowledge (Great Britain)
+Pub Date	1844
+Pub Title	Maps of the Society for the Diffusion of Useful Knowledge. Vol. 1. London: Chapman and Hall, 186, Strand, 1844.
+Pub Reference	Phillips, 794.
+Pub Note	The SDUK, as the Society was known, produced inexpensive maps to encourage broad use in education. The maps in these two volumes were issued in parts over several years. The city plans are of particular interest, with vignettes and great detail. The gnomonic star maps were issued separately in this edition in their own covers. This is the second edition, the first being by Baldwin and Cradock, with the maps issued in numbers and later bound as a set. Rumsey Collection copy originally issued without the 6 "World on a gnomonic projection" maps; copies of them have been laid in. Atlas is bound in half leather dark brown cloth covered boards with "Maps. Vol. 1," "Maps. Vol. 2" stamped in gold on the spines. Maps with outline color; geological map of England and Wales hand colored in full color.
+Pub List No	0890.000
+Pub Type	World Atlas
+Pub Maps	207
+Pub Height cm	43
+Pub Width cm	37
+Image No	0890208
+Download 1	<a href=https://www.davidrumsey.com/rumsey/download.pl?image=/D0054/0890208.sid target=_blank>Full Image Download in MrSID Format</a>
+Download 2	<a href="https://www.extensis.com/support/geoviewer-9" target="_blank">GeoViewer for JP2 and SID files</a>
+Authors	Society for the Diffusion of Useful Knowledge (Great Britain)
+Collection	Rumsey Collection
+
+SOURCE: <https://davidrumsey.georeferencer.com/maps/784dd2aa-30f6-5668-8e35-3878a385d14a/>
